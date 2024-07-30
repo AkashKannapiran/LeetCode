@@ -65,6 +65,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0009-palindrome-number](https://github.com/AkashKannapiran/LeetCode/tree/master/0009-palindrome-number) |
+| [0069-sqrtx](https://github.com/AkashKannapiran/LeetCode/tree/master/0069-sqrtx) |
 | [1406-subtract-the-product-and-sum-of-digits-of-an-integer](https://github.com/AkashKannapiran/LeetCode/tree/master/1406-subtract-the-product-and-sum-of-digits-of-an-integer) |
 ## Simulation
 |  |
@@ -79,4 +80,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0020-valid-parentheses](https://github.com/AkashKannapiran/LeetCode/tree/master/0020-valid-parentheses) |
+## Binary Search
+|  |
+| ------- |
+| [0069-sqrtx](https://github.com/AkashKannapiran/LeetCode/tree/master/0069-sqrtx) |
 <!---LeetCode Topics End-->
