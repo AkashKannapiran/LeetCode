@@ -1,19 +1,19 @@
 class Solution {
     public int[] numberOfLines(int[] widths, String s) {
-        int[] result = new int[2];
-        result[0] = 1;
-        int length = 0;
+        int line = 1;
+        int width = 0;
 
-        for (int i = 0; i < s.length(); i++) {
-            if (length + widths[s.charAt(i) - 'a'] <= 100) {
-                length += widths[s.charAt(i) - 'a'];
-            } else {
-                result[0]++;
-                length = widths[s.charAt(i) - 'a'];
+        for (char ch : s.toCharArray()) {
+            int charWidth = widths[ch - 'a'];
+
+            if (charWidth + width > 100) {
+                line++;
+                width = 0;
             }
-        }
-        result[1] = length;
 
-        return result;
+            width += charWidth;
+        }
+
+        return new int[] {line, width};
     }
 }
