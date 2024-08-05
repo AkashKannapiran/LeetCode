@@ -10,6 +10,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0822-unique-morse-code-words](https://github.com/AkashKannapiran/LeetCode/tree/master/0822-unique-morse-code-words) |
 | [0824-number-of-lines-to-write-string](https://github.com/AkashKannapiran/LeetCode/tree/master/0824-number-of-lines-to-write-string) |
 | [0948-sort-an-array](https://github.com/AkashKannapiran/LeetCode/tree/master/0948-sort-an-array) |
+| [1580-shuffle-the-array](https://github.com/AkashKannapiran/LeetCode/tree/master/1580-shuffle-the-array) |
 | [1603-running-sum-of-1d-array](https://github.com/AkashKannapiran/LeetCode/tree/master/1603-running-sum-of-1d-array) |
 | [1791-richest-customer-wealth](https://github.com/AkashKannapiran/LeetCode/tree/master/1791-richest-customer-wealth) |
 | [2048-build-array-from-permutation](https://github.com/AkashKannapiran/LeetCode/tree/master/2048-build-array-from-permutation) |
