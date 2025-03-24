@@ -20,6 +20,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1603-running-sum-of-1d-array](https://github.com/AkashKannapiran/LeetCode/tree/master/1603-running-sum-of-1d-array) |
 | [1635-number-of-good-pairs](https://github.com/AkashKannapiran/LeetCode/tree/master/1635-number-of-good-pairs) |
 | [1791-richest-customer-wealth](https://github.com/AkashKannapiran/LeetCode/tree/master/1791-richest-customer-wealth) |
+| [1899-count-items-matching-a-rule](https://github.com/AkashKannapiran/LeetCode/tree/master/1899-count-items-matching-a-rule) |
 | [2048-build-array-from-permutation](https://github.com/AkashKannapiran/LeetCode/tree/master/2048-build-array-from-permutation) |
 | [2058-concatenation-of-array](https://github.com/AkashKannapiran/LeetCode/tree/master/2058-concatenation-of-array) |
 | [3430-count-days-without-meetings](https://github.com/AkashKannapiran/LeetCode/tree/master/3430-count-days-without-meetings) |
@@ -86,6 +87,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0822-unique-morse-code-words](https://github.com/AkashKannapiran/LeetCode/tree/master/0822-unique-morse-code-words) |
 | [0824-number-of-lines-to-write-string](https://github.com/AkashKannapiran/LeetCode/tree/master/0824-number-of-lines-to-write-string) |
 | [1894-merge-strings-alternately](https://github.com/AkashKannapiran/LeetCode/tree/master/1894-merge-strings-alternately) |
+| [1899-count-items-matching-a-rule](https://github.com/AkashKannapiran/LeetCode/tree/master/1899-count-items-matching-a-rule) |
 | [1960-check-if-the-sentence-is-pangram](https://github.com/AkashKannapiran/LeetCode/tree/master/1960-check-if-the-sentence-is-pangram) |
 ## Bit Manipulation
 |  |
