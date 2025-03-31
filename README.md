@@ -34,6 +34,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2058-concatenation-of-array](https://github.com/AkashKannapiran/LeetCode/tree/master/2058-concatenation-of-array) |
 | [2160-minimum-operations-to-make-a-uni-value-grid](https://github.com/AkashKannapiran/LeetCode/tree/master/2160-minimum-operations-to-make-a-uni-value-grid) |
 | [2588-maximum-number-of-points-from-grid-queries](https://github.com/AkashKannapiran/LeetCode/tree/master/2588-maximum-number-of-points-from-grid-queries) |
+| [2681-put-marbles-in-bags](https://github.com/AkashKannapiran/LeetCode/tree/master/2681-put-marbles-in-bags) |
 | [2888-minimum-index-of-a-valid-split](https://github.com/AkashKannapiran/LeetCode/tree/master/2888-minimum-index-of-a-valid-split) |
 | [3001-apply-operations-to-maximize-score](https://github.com/AkashKannapiran/LeetCode/tree/master/3001-apply-operations-to-maximize-score) |
 | [3430-count-days-without-meetings](https://github.com/AkashKannapiran/LeetCode/tree/master/3430-count-days-without-meetings) |
@@ -53,6 +54,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1482-how-many-numbers-are-smaller-than-the-current-number](https://github.com/AkashKannapiran/LeetCode/tree/master/1482-how-many-numbers-are-smaller-than-the-current-number) |
 | [2160-minimum-operations-to-make-a-uni-value-grid](https://github.com/AkashKannapiran/LeetCode/tree/master/2160-minimum-operations-to-make-a-uni-value-grid) |
 | [2588-maximum-number-of-points-from-grid-queries](https://github.com/AkashKannapiran/LeetCode/tree/master/2588-maximum-number-of-points-from-grid-queries) |
+| [2681-put-marbles-in-bags](https://github.com/AkashKannapiran/LeetCode/tree/master/2681-put-marbles-in-bags) |
 | [2888-minimum-index-of-a-valid-split](https://github.com/AkashKannapiran/LeetCode/tree/master/2888-minimum-index-of-a-valid-split) |
 | [3001-apply-operations-to-maximize-score](https://github.com/AkashKannapiran/LeetCode/tree/master/3001-apply-operations-to-maximize-score) |
 | [3430-count-days-without-meetings](https://github.com/AkashKannapiran/LeetCode/tree/master/3430-count-days-without-meetings) |
@@ -62,6 +64,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0948-sort-an-array](https://github.com/AkashKannapiran/LeetCode/tree/master/0948-sort-an-array) |
 | [2588-maximum-number-of-points-from-grid-queries](https://github.com/AkashKannapiran/LeetCode/tree/master/2588-maximum-number-of-points-from-grid-queries) |
+| [2681-put-marbles-in-bags](https://github.com/AkashKannapiran/LeetCode/tree/master/2681-put-marbles-in-bags) |
 ## Merge Sort
 |  |
 | ------- |
@@ -204,6 +207,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0768-partition-labels](https://github.com/AkashKannapiran/LeetCode/tree/master/0768-partition-labels) |
+| [2681-put-marbles-in-bags](https://github.com/AkashKannapiran/LeetCode/tree/master/2681-put-marbles-in-bags) |
 | [3001-apply-operations-to-maximize-score](https://github.com/AkashKannapiran/LeetCode/tree/master/3001-apply-operations-to-maximize-score) |
 ## Number Theory
 |  |
