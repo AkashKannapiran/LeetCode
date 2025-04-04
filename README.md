@@ -116,6 +116,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0389-find-the-difference](https://github.com/AkashKannapiran/LeetCode/tree/master/0389-find-the-difference) |
 | [0768-partition-labels](https://github.com/AkashKannapiran/LeetCode/tree/master/0768-partition-labels) |
 | [0822-unique-morse-code-words](https://github.com/AkashKannapiran/LeetCode/tree/master/0822-unique-morse-code-words) |
+| [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/AkashKannapiran/LeetCode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
 | [1482-how-many-numbers-are-smaller-than-the-current-number](https://github.com/AkashKannapiran/LeetCode/tree/master/1482-how-many-numbers-are-smaller-than-the-current-number) |
 | [1635-number-of-good-pairs](https://github.com/AkashKannapiran/LeetCode/tree/master/1635-number-of-good-pairs) |
 | [1960-check-if-the-sentence-is-pangram](https://github.com/AkashKannapiran/LeetCode/tree/master/1960-check-if-the-sentence-is-pangram) |
@@ -217,6 +218,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Breadth-First Search
 |  |
 | ------- |
+| [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/AkashKannapiran/LeetCode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
 | [2588-maximum-number-of-points-from-grid-queries](https://github.com/AkashKannapiran/LeetCode/tree/master/2588-maximum-number-of-points-from-grid-queries) |
 ## Union Find
 |  |
@@ -242,12 +244,15 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/AkashKannapiran/LeetCode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
+| [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/AkashKannapiran/LeetCode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
 ## Depth-First Search
 |  |
 | ------- |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/AkashKannapiran/LeetCode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
+| [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/AkashKannapiran/LeetCode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
 ## Binary Tree
 |  |
 | ------- |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/AkashKannapiran/LeetCode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
+| [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/AkashKannapiran/LeetCode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
 <!---LeetCode Topics End-->
