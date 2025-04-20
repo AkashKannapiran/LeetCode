@@ -16,6 +16,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0283-move-zeroes](https://github.com/AkashKannapiran/LeetCode/tree/master/0283-move-zeroes) |
 | [0368-largest-divisible-subset](https://github.com/AkashKannapiran/LeetCode/tree/master/0368-largest-divisible-subset) |
 | [0416-partition-equal-subset-sum](https://github.com/AkashKannapiran/LeetCode/tree/master/0416-partition-equal-subset-sum) |
+| [0797-rabbits-in-forest](https://github.com/AkashKannapiran/LeetCode/tree/master/0797-rabbits-in-forest) |
 | [0822-unique-morse-code-words](https://github.com/AkashKannapiran/LeetCode/tree/master/0822-unique-morse-code-words) |
 | [0824-number-of-lines-to-write-string](https://github.com/AkashKannapiran/LeetCode/tree/master/0824-number-of-lines-to-write-string) |
 | [0861-flipping-an-image](https://github.com/AkashKannapiran/LeetCode/tree/master/0861-flipping-an-image) |
@@ -132,6 +133,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0242-valid-anagram](https://github.com/AkashKannapiran/LeetCode/tree/master/0242-valid-anagram) |
 | [0389-find-the-difference](https://github.com/AkashKannapiran/LeetCode/tree/master/0389-find-the-difference) |
 | [0768-partition-labels](https://github.com/AkashKannapiran/LeetCode/tree/master/0768-partition-labels) |
+| [0797-rabbits-in-forest](https://github.com/AkashKannapiran/LeetCode/tree/master/0797-rabbits-in-forest) |
 | [0822-unique-morse-code-words](https://github.com/AkashKannapiran/LeetCode/tree/master/0822-unique-morse-code-words) |
 | [0896-smallest-subtree-with-all-the-deepest-nodes](https://github.com/AkashKannapiran/LeetCode/tree/master/0896-smallest-subtree-with-all-the-deepest-nodes) |
 | [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/AkashKannapiran/LeetCode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
@@ -179,6 +181,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0066-plus-one](https://github.com/AkashKannapiran/LeetCode/tree/master/0066-plus-one) |
 | [0069-sqrtx](https://github.com/AkashKannapiran/LeetCode/tree/master/0069-sqrtx) |
 | [0368-largest-divisible-subset](https://github.com/AkashKannapiran/LeetCode/tree/master/0368-largest-divisible-subset) |
+| [0797-rabbits-in-forest](https://github.com/AkashKannapiran/LeetCode/tree/master/0797-rabbits-in-forest) |
 | [1031-add-to-array-form-of-integer](https://github.com/AkashKannapiran/LeetCode/tree/master/1031-add-to-array-form-of-integer) |
 | [1378-cells-with-odd-values-in-a-matrix](https://github.com/AkashKannapiran/LeetCode/tree/master/1378-cells-with-odd-values-in-a-matrix) |
 | [1406-subtract-the-product-and-sum-of-digits-of-an-integer](https://github.com/AkashKannapiran/LeetCode/tree/master/1406-subtract-the-product-and-sum-of-digits-of-an-integer) |
@@ -267,6 +270,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/AkashKannapiran/LeetCode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0768-partition-labels](https://github.com/AkashKannapiran/LeetCode/tree/master/0768-partition-labels) |
+| [0797-rabbits-in-forest](https://github.com/AkashKannapiran/LeetCode/tree/master/0797-rabbits-in-forest) |
 | [2681-put-marbles-in-bags](https://github.com/AkashKannapiran/LeetCode/tree/master/2681-put-marbles-in-bags) |
 | [3001-apply-operations-to-maximize-score](https://github.com/AkashKannapiran/LeetCode/tree/master/3001-apply-operations-to-maximize-score) |
 ## Number Theory
