@@ -25,6 +25,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0948-sort-an-array](https://github.com/AkashKannapiran/LeetCode/tree/master/0948-sort-an-array) |
 | [1031-add-to-array-form-of-integer](https://github.com/AkashKannapiran/LeetCode/tree/master/1031-add-to-array-form-of-integer) |
 | [1049-minimum-domino-rotations-for-equal-row](https://github.com/AkashKannapiran/LeetCode/tree/master/1049-minimum-domino-rotations-for-equal-row) |
+| [1227-number-of-equivalent-domino-pairs](https://github.com/AkashKannapiran/LeetCode/tree/master/1227-number-of-equivalent-domino-pairs) |
 | [1378-cells-with-odd-values-in-a-matrix](https://github.com/AkashKannapiran/LeetCode/tree/master/1378-cells-with-odd-values-in-a-matrix) |
 | [1421-find-numbers-with-even-number-of-digits](https://github.com/AkashKannapiran/LeetCode/tree/master/1421-find-numbers-with-even-number-of-digits) |
 | [1426-find-n-unique-integers-sum-up-to-zero](https://github.com/AkashKannapiran/LeetCode/tree/master/1426-find-n-unique-integers-sum-up-to-zero) |
@@ -119,6 +120,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0169-majority-element](https://github.com/AkashKannapiran/LeetCode/tree/master/0169-majority-element) |
 | [0948-sort-an-array](https://github.com/AkashKannapiran/LeetCode/tree/master/0948-sort-an-array) |
+| [1227-number-of-equivalent-domino-pairs](https://github.com/AkashKannapiran/LeetCode/tree/master/1227-number-of-equivalent-domino-pairs) |
 | [1482-how-many-numbers-are-smaller-than-the-current-number](https://github.com/AkashKannapiran/LeetCode/tree/master/1482-how-many-numbers-are-smaller-than-the-current-number) |
 | [1635-number-of-good-pairs](https://github.com/AkashKannapiran/LeetCode/tree/master/1635-number-of-good-pairs) |
 ## Two Pointers
@@ -148,6 +150,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0822-unique-morse-code-words](https://github.com/AkashKannapiran/LeetCode/tree/master/0822-unique-morse-code-words) |
 | [0896-smallest-subtree-with-all-the-deepest-nodes](https://github.com/AkashKannapiran/LeetCode/tree/master/0896-smallest-subtree-with-all-the-deepest-nodes) |
 | [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/AkashKannapiran/LeetCode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
+| [1227-number-of-equivalent-domino-pairs](https://github.com/AkashKannapiran/LeetCode/tree/master/1227-number-of-equivalent-domino-pairs) |
 | [1482-how-many-numbers-are-smaller-than-the-current-number](https://github.com/AkashKannapiran/LeetCode/tree/master/1482-how-many-numbers-are-smaller-than-the-current-number) |
 | [1500-count-largest-group](https://github.com/AkashKannapiran/LeetCode/tree/master/1500-count-largest-group) |
 | [1635-number-of-good-pairs](https://github.com/AkashKannapiran/LeetCode/tree/master/1635-number-of-good-pairs) |
