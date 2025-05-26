@@ -149,6 +149,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1227-number-of-equivalent-domino-pairs](https://github.com/AkashKannapiran/LeetCode/tree/master/1227-number-of-equivalent-domino-pairs) |
 | [1482-how-many-numbers-are-smaller-than-the-current-number](https://github.com/AkashKannapiran/LeetCode/tree/master/1482-how-many-numbers-are-smaller-than-the-current-number) |
 | [1635-number-of-good-pairs](https://github.com/AkashKannapiran/LeetCode/tree/master/1635-number-of-good-pairs) |
+| [1986-largest-color-value-in-a-directed-graph](https://github.com/AkashKannapiran/LeetCode/tree/master/1986-largest-color-value-in-a-directed-graph) |
 | [2237-longest-palindrome-by-concatenating-two-letter-words](https://github.com/AkashKannapiran/LeetCode/tree/master/2237-longest-palindrome-by-concatenating-two-letter-words) |
 | [3629-total-characters-in-string-after-transformations-i](https://github.com/AkashKannapiran/LeetCode/tree/master/3629-total-characters-in-string-after-transformations-i) |
 | [3630-total-characters-in-string-after-transformations-ii](https://github.com/AkashKannapiran/LeetCode/tree/master/3630-total-characters-in-string-after-transformations-ii) |
@@ -186,6 +187,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1500-count-largest-group](https://github.com/AkashKannapiran/LeetCode/tree/master/1500-count-largest-group) |
 | [1635-number-of-good-pairs](https://github.com/AkashKannapiran/LeetCode/tree/master/1635-number-of-good-pairs) |
 | [1960-check-if-the-sentence-is-pangram](https://github.com/AkashKannapiran/LeetCode/tree/master/1960-check-if-the-sentence-is-pangram) |
+| [1986-largest-color-value-in-a-directed-graph](https://github.com/AkashKannapiran/LeetCode/tree/master/1986-largest-color-value-in-a-directed-graph) |
 | [2215-finding-3-digit-even-numbers](https://github.com/AkashKannapiran/LeetCode/tree/master/2215-finding-3-digit-even-numbers) |
 | [2237-longest-palindrome-by-concatenating-two-letter-words](https://github.com/AkashKannapiran/LeetCode/tree/master/2237-longest-palindrome-by-concatenating-two-letter-words) |
 | [2626-count-the-number-of-good-subarrays](https://github.com/AkashKannapiran/LeetCode/tree/master/2626-count-the-number-of-good-subarrays) |
@@ -321,6 +323,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0416-partition-equal-subset-sum](https://github.com/AkashKannapiran/LeetCode/tree/master/0416-partition-equal-subset-sum) |
 | [0806-domino-and-tromino-tiling](https://github.com/AkashKannapiran/LeetCode/tree/master/0806-domino-and-tromino-tiling) |
 | [0868-push-dominoes](https://github.com/AkashKannapiran/LeetCode/tree/master/0868-push-dominoes) |
+| [1986-largest-color-value-in-a-directed-graph](https://github.com/AkashKannapiran/LeetCode/tree/master/1986-largest-color-value-in-a-directed-graph) |
 | [2061-painting-a-grid-with-three-different-colors](https://github.com/AkashKannapiran/LeetCode/tree/master/2061-painting-a-grid-with-three-different-colors) |
 | [2262-solving-questions-with-brainpower](https://github.com/AkashKannapiran/LeetCode/tree/master/2262-solving-questions-with-brainpower) |
 | [2415-count-the-number-of-ideal-arrays](https://github.com/AkashKannapiran/LeetCode/tree/master/2415-count-the-number-of-ideal-arrays) |
@@ -454,6 +457,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Graph
 |  |
 | ------- |
+| [1986-largest-color-value-in-a-directed-graph](https://github.com/AkashKannapiran/LeetCode/tree/master/1986-largest-color-value-in-a-directed-graph) |
 | [3627-find-minimum-time-to-reach-last-room-i](https://github.com/AkashKannapiran/LeetCode/tree/master/3627-find-minimum-time-to-reach-last-room-i) |
 | [3628-find-minimum-time-to-reach-last-room-ii](https://github.com/AkashKannapiran/LeetCode/tree/master/3628-find-minimum-time-to-reach-last-room-ii) |
 ## Shortest Path
@@ -461,4 +465,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [3627-find-minimum-time-to-reach-last-room-i](https://github.com/AkashKannapiran/LeetCode/tree/master/3627-find-minimum-time-to-reach-last-room-i) |
 | [3628-find-minimum-time-to-reach-last-room-ii](https://github.com/AkashKannapiran/LeetCode/tree/master/3628-find-minimum-time-to-reach-last-room-ii) |
+## Topological Sort
+|  |
+| ------- |
+| [1986-largest-color-value-in-a-directed-graph](https://github.com/AkashKannapiran/LeetCode/tree/master/1986-largest-color-value-in-a-directed-graph) |
+## Memoization
+|  |
+| ------- |
+| [1986-largest-color-value-in-a-directed-graph](https://github.com/AkashKannapiran/LeetCode/tree/master/1986-largest-color-value-in-a-directed-graph) |
 <!---LeetCode Topics End-->
