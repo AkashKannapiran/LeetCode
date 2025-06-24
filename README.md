@@ -63,6 +63,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2320-find-all-k-distant-indices-in-an-array](https://github.com/AkashKannapiran/LeetCode/tree/master/2320-find-all-k-distant-indices-in-an-array) |
 | [2387-partition-array-such-that-maximum-difference-is-k](https://github.com/AkashKannapiran/LeetCode/tree/master/2387-partition-array-such-that-maximum-difference-is-k) |
 | [2394-count-subarrays-with-score-less-than-k](https://github.com/AkashKannapiran/LeetCode/tree/master/2394-count-subarrays-with-score-less-than-k) |
+| [2398-check-if-matrix-is-x-matrix](https://github.com/AkashKannapiran/LeetCode/tree/master/2398-check-if-matrix-is-x-matrix) |
 | [2527-count-subarrays-with-fixed-bounds](https://github.com/AkashKannapiran/LeetCode/tree/master/2527-count-subarrays-with-fixed-bounds) |
 | [2588-maximum-number-of-points-from-grid-queries](https://github.com/AkashKannapiran/LeetCode/tree/master/2588-maximum-number-of-points-from-grid-queries) |
 | [2626-count-the-number-of-good-subarrays](https://github.com/AkashKannapiran/LeetCode/tree/master/2626-count-the-number-of-good-subarrays) |
@@ -355,6 +356,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1677-matrix-diagonal-sum](https://github.com/AkashKannapiran/LeetCode/tree/master/1677-matrix-diagonal-sum) |
 | [1791-richest-customer-wealth](https://github.com/AkashKannapiran/LeetCode/tree/master/1791-richest-customer-wealth) |
 | [2160-minimum-operations-to-make-a-uni-value-grid](https://github.com/AkashKannapiran/LeetCode/tree/master/2160-minimum-operations-to-make-a-uni-value-grid) |
+| [2398-check-if-matrix-is-x-matrix](https://github.com/AkashKannapiran/LeetCode/tree/master/2398-check-if-matrix-is-x-matrix) |
 | [2588-maximum-number-of-points-from-grid-queries](https://github.com/AkashKannapiran/LeetCode/tree/master/2588-maximum-number-of-points-from-grid-queries) |
 | [3627-find-minimum-time-to-reach-last-room-i](https://github.com/AkashKannapiran/LeetCode/tree/master/3627-find-minimum-time-to-reach-last-room-i) |
 | [3628-find-minimum-time-to-reach-last-room-ii](https://github.com/AkashKannapiran/LeetCode/tree/master/3628-find-minimum-time-to-reach-last-room-ii) |
