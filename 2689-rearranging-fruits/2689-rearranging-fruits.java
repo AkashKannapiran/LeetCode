@@ -1,40 +1,68 @@
 class Solution {
-
     public long minCost(int[] basket1, int[] basket2) {
-        TreeMap<Integer, Integer> freq = new TreeMap<>();
-        int m = Integer.MAX_VALUE;
+        List<int[]> counter = new ArrayList<>();
+        Arrays.sort(basket1);
+        Arrays.sort(basket2);
+        int p1 = 0;
+        int p2 = 0;
         
-        for (int b1 : basket1) {
-            freq.put(b1, freq.getOrDefault(b1, 0) + 1);
-            m = Math.min(m, b1);
-        }
+        int totalToSwap = 0;
         
-        for (int b2 : basket2) {
-            freq.put(b2, freq.getOrDefault(b2, 0) - 1);
-            m = Math.min(m, b2);
-        }
+        while (p1 < basket1.length || p2 < basket2.length) {
+            if (p1 < basket1.length && p2 < basket2.length && basket1[p1] == basket2[p2]) {
+                p1++;
+                p2++;
+                continue;
+            }
 
-        List<Integer> merge = new ArrayList<>();
-        
-        for (var entry : freq.entrySet()) {
-            int count = entry.getValue();
+            int curVal = 0;
+            int curCount = 0;
             
-            if (count % 2 != 0) {
+            if ((p1 < basket1.length && p2 < basket2.length && basket1[p1] < basket2[p2]) || p2 >= basket2.length) {
+                curVal = basket1[p1];
+                while (p1 < basket1.length && basket1[p1] == curVal) {
+                    curCount++;
+                    p1++;
+                }
+            } else{
+                curVal = basket2[p2];
+                while (p2 < basket2.length && basket2[p2] == curVal) {
+                    curCount++;
+                    p2++;
+                }
+            }
+
+            if (curCount % 2 != 0) {
                 return -1;
             }
 
-            for (int i = 0; i < Math.abs(count) / 2; i++) {
-                merge.add(entry.getKey());
-            }
+            totalToSwap += curCount / 2;
+            counter.add(new int[]{curVal, curCount / 2});
         }
 
-        Collections.sort(merge);
-        long res = 0;
-        
-        for (int i = 0; i < merge.size() / 2; i++) {
-            res += Math.min(2 * m, merge.get(i));
+        long ans = 0;
+        int swaped = 0;
+        int minEle = Math.min(basket1[0], basket2[0]);
+        int i = 0;
+        int acc = 0;
+
+        while (i < counter.size()) {
+            int[] pair = counter.get(i);
+            ans += Math.min(minEle * 2, pair[0]);
+            swaped += 2;
+            
+            if (swaped == totalToSwap) {
+                break;
+            }
+
+            acc++;
+            
+            if (acc == pair[1]) {
+                acc = 0;
+                i++;
+            }
         }
         
-        return res;
+        return ans;
     }
 }
