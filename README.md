@@ -355,6 +355,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0069-sqrtx](https://github.com/AkashKannapiran/LeetCode/tree/master/0069-sqrtx) |
 | [0368-largest-divisible-subset](https://github.com/AkashKannapiran/LeetCode/tree/master/0368-largest-divisible-subset) |
 | [0797-rabbits-in-forest](https://github.com/AkashKannapiran/LeetCode/tree/master/0797-rabbits-in-forest) |
+| [0826-soup-servings](https://github.com/AkashKannapiran/LeetCode/tree/master/0826-soup-servings) |
 | [1031-add-to-array-form-of-integer](https://github.com/AkashKannapiran/LeetCode/tree/master/1031-add-to-array-form-of-integer) |
 | [1378-cells-with-odd-values-in-a-matrix](https://github.com/AkashKannapiran/LeetCode/tree/master/1378-cells-with-odd-values-in-a-matrix) |
 | [1406-subtract-the-product-and-sum-of-digits-of-an-integer](https://github.com/AkashKannapiran/LeetCode/tree/master/1406-subtract-the-product-and-sum-of-digits-of-an-integer) |
@@ -464,6 +465,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0368-largest-divisible-subset](https://github.com/AkashKannapiran/LeetCode/tree/master/0368-largest-divisible-subset) |
 | [0416-partition-equal-subset-sum](https://github.com/AkashKannapiran/LeetCode/tree/master/0416-partition-equal-subset-sum) |
 | [0806-domino-and-tromino-tiling](https://github.com/AkashKannapiran/LeetCode/tree/master/0806-domino-and-tromino-tiling) |
+| [0826-soup-servings](https://github.com/AkashKannapiran/LeetCode/tree/master/0826-soup-servings) |
 | [0868-push-dominoes](https://github.com/AkashKannapiran/LeetCode/tree/master/0868-push-dominoes) |
 | [0934-bitwise-ors-of-subarrays](https://github.com/AkashKannapiran/LeetCode/tree/master/0934-bitwise-ors-of-subarrays) |
 | [1851-maximum-number-of-events-that-can-be-attended-ii](https://github.com/AkashKannapiran/LeetCode/tree/master/1851-maximum-number-of-events-that-can-be-attended-ii) |
@@ -706,4 +708,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2503-longest-subarray-with-maximum-bitwise-and](https://github.com/AkashKannapiran/LeetCode/tree/master/2503-longest-subarray-with-maximum-bitwise-and) |
+## Probability and Statistics
+|  |
+| ------- |
+| [0826-soup-servings](https://github.com/AkashKannapiran/LeetCode/tree/master/0826-soup-servings) |
 <!---LeetCode Topics End-->
