@@ -1,38 +1,41 @@
 class Solution {
+    private Double[][] dp;
+
     public double soupServings(int n) {
-        int m = (int)Math.ceil(n / 25.0);
-        Map<Integer, Map<Integer, Double>> dp = new HashMap<>();
-
-        for (int k = 1; k <= m; k++) {
-            if (calculateDP(k, k, dp) > 1 - 1e-5) {
-                return 1.0;
-            }
-        }
-        
-        return calculateDP(m, m, dp);
-    }
-
-    private double calculateDP(int i, int j, Map<Integer, Map<Integer, Double>> dp) {
-        if (i <= 0 && j <= 0) {
-            return 0.5;
-        }
-        
-        if (i <= 0) {
+        if (n > 5000) {
             return 1.0;
         }
+
+        int m = (int)Math.ceil(n / 25.0);
+        dp = new Double[m + 1][m + 1];
         
-        if (j <= 0) {
+        return findProb(m, m);
+    }
+
+    private double findProb(int a, int b) {
+        if (a <= 0 && b <= 0) {
+            return 0.5;
+        }
+
+        if (a <= 0) {
+            return 1.0;
+        }
+
+        if (b <= 0) {
             return 0.0;
         }
-        
-        if (dp.containsKey(i) && dp.get(i).containsKey(j)) {
-            return dp.get(i).get(j);
+
+        if (dp[a][b] != null) {
+            return dp[a][b];
         }
+
+        dp[a][b] = 0.25 * (findProb(a - 4, b) 
+                    + findProb(a - 3, b - 1) 
+                    + findProb(a - 2, b - 2) 
+                    + findProb(a - 1, b - 3)
+                    );
+
         
-        double result = (calculateDP(i - 4, j, dp) + calculateDP(i - 3, j - 1, dp) +
-                calculateDP(i - 2, j - 2, dp) + calculateDP(i - 1, j - 3, dp)) / 4.0;
-        dp.computeIfAbsent(i, k -> new HashMap<>()).put(j, result);
-        
-        return result;
+        return dp[a][b];
     }
 }
