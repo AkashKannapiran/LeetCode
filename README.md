@@ -17,6 +17,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0135-candy](https://github.com/AkashKannapiran/LeetCode/tree/master/0135-candy) |
 | [0169-majority-element](https://github.com/AkashKannapiran/LeetCode/tree/master/0169-majority-element) |
 | [0217-contains-duplicate](https://github.com/AkashKannapiran/LeetCode/tree/master/0217-contains-duplicate) |
+| [0221-maximal-square](https://github.com/AkashKannapiran/LeetCode/tree/master/0221-maximal-square) |
 | [0283-move-zeroes](https://github.com/AkashKannapiran/LeetCode/tree/master/0283-move-zeroes) |
 | [0368-largest-divisible-subset](https://github.com/AkashKannapiran/LeetCode/tree/master/0368-largest-divisible-subset) |
 | [0416-partition-equal-subset-sum](https://github.com/AkashKannapiran/LeetCode/tree/master/0416-partition-equal-subset-sum) |
@@ -464,6 +465,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0048-rotate-image](https://github.com/AkashKannapiran/LeetCode/tree/master/0048-rotate-image) |
 | [0073-set-matrix-zeroes](https://github.com/AkashKannapiran/LeetCode/tree/master/0073-set-matrix-zeroes) |
+| [0221-maximal-square](https://github.com/AkashKannapiran/LeetCode/tree/master/0221-maximal-square) |
 | [0861-flipping-an-image](https://github.com/AkashKannapiran/LeetCode/tree/master/0861-flipping-an-image) |
 | [0898-transpose-matrix](https://github.com/AkashKannapiran/LeetCode/tree/master/0898-transpose-matrix) |
 | [0945-snakes-and-ladders](https://github.com/AkashKannapiran/LeetCode/tree/master/0945-snakes-and-ladders) |
@@ -483,6 +485,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0118-pascals-triangle](https://github.com/AkashKannapiran/LeetCode/tree/master/0118-pascals-triangle) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/AkashKannapiran/LeetCode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/AkashKannapiran/LeetCode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
+| [0221-maximal-square](https://github.com/AkashKannapiran/LeetCode/tree/master/0221-maximal-square) |
 | [0368-largest-divisible-subset](https://github.com/AkashKannapiran/LeetCode/tree/master/0368-largest-divisible-subset) |
 | [0416-partition-equal-subset-sum](https://github.com/AkashKannapiran/LeetCode/tree/master/0416-partition-equal-subset-sum) |
 | [0806-domino-and-tromino-tiling](https://github.com/AkashKannapiran/LeetCode/tree/master/0806-domino-and-tromino-tiling) |
