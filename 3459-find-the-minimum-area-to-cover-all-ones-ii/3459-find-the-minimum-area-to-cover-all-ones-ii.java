@@ -1,81 +1,133 @@
 class Solution {
+    public int minimumSum(int[][] grid) {
+        return Math.min(f(grid), f(rotate(grid)));
+    }
 
-    private int minimumSum2(int[][] grid, int u, int d, int l, int r) {
-        int min_i = grid.length;
-        int max_i = 0;
-        int min_j = grid[0].length;
-        int max_j = 0;
+    private int f(int[][] a) {
+        int m = a.length;
+        int n = a[0].length;
+        int[][] lr = new int[m][2];
 
-        for (int i = u; i <= d; i++) {
-            for (int j = l; j <= r; j++) {
-                if (grid[i][j] == 1) {
-                    min_i = Math.min(min_i, i);
-                    min_j = Math.min(min_j, j);
-                    max_i = Math.max(max_i, i);
-                    max_j = Math.max(max_j, j);
+        for (int i = 0; i < m; i++) {
+            int l = -1;
+            int r = 0;
+
+            for (int j = 0; j < n; j++) {
+                if (a[i][j] > 0) {
+                    if (l < 0) {
+                        l = j;
+                    }
+
+                    r = j;
+                }
+            }
+
+            lr[i][0] = l;
+            lr[i][1] = r;
+        }
+
+        int[][] lt = minimumArea(a);
+        a = rotate(a);
+
+        int[][] lb = rotate(rotate(rotate(minimumArea(a))));
+        a = rotate(a);
+        
+        int[][] rb = rotate(rotate(minimumArea(a)));
+        a = rotate(a);
+        
+        int[][] rt = rotate(minimumArea(a));
+
+        int ans = Integer.MAX_VALUE;
+        
+        if (m >= 3) {
+            for (int i = 1; i < m; i++) {
+                int left = n;
+                int right = 0;
+                int top = m;
+                int bottom = 0;
+
+                for (int j = i + 1; j < m; j++) {
+                    int l = lr[j - 1][0];
+
+                    if (l >= 0) {
+                        left = Math.min(left, l);
+                        right = Math.max(right, lr[j - 1][1]);
+                        top = Math.min(top, j - 1);
+                        bottom = j - 1;
+                    }
+                    
+                    ans = Math.min(ans, lt[i][n] + (right - left + 1) * (bottom - top + 1) + lb[j][n]);
                 }
             }
         }
 
-        return min_i <= max_i
-            ? (max_i - min_i + 1) * (max_j - min_j + 1)
-            : Integer.MAX_VALUE / 3;
-    }
-
-    private int[][] rotate(int[][] vec) {
-        int n = vec.length;
-        int m = vec[0].length;
-        int[][] ret = new int[m][n];
-        
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                ret[m - j - 1][i] = vec[i][j];
-            }
-        }
-        
-        return ret;
-    }
-
-    private int solve(int[][] grid) {
-        int n = grid.length;
-        int m = grid[0].length;
-        int res = n * m;
-        
-        for (int i = 0; i + 1 < n; i++) {
-            for (int j = 0; j + 1 < m; j++) {
-                res = Math.min(
-                    res,
-                    minimumSum2(grid, 0, i, 0, m - 1) +
-                    minimumSum2(grid, i + 1, n - 1, 0, j) +
-                    minimumSum2(grid, i + 1, n - 1, j + 1, m - 1)
-                );
-
-                res = Math.min(
-                    res,
-                    minimumSum2(grid, 0, i, 0, j) +
-                    minimumSum2(grid, 0, i, j + 1, m - 1) +
-                    minimumSum2(grid, i + 1, n - 1, 0, m - 1)
-                );
+        if (m >= 2 && n >= 2) {
+            for (int i = 1; i < m; i++) {
+                for (int j = 1; j < n; j++) {
+                    ans = Math.min(ans, lt[i][n] + lb[i][j] + rb[i][j]);
+                    ans = Math.min(ans, lt[i][j] + rt[i][j] + lb[i][n]);
+                }
             }
         }
 
-        for (int i = 0; i + 2 < n; i++) {
-            for (int j = i + 1; j + 1 < n; j++) {
-                res = Math.min(
-                    res,
-                    minimumSum2(grid, 0, i, 0, m - 1) +
-                    minimumSum2(grid, i + 1, j, 0, m - 1) +
-                    minimumSum2(grid, j + 1, n - 1, 0, m - 1)
-                );
+        return ans;
+    }
+
+    private int[][] minimumArea(int[][] a) {
+        int m = a.length;
+        int n = a[0].length;
+        int[][] f = new int[m + 1][n + 1];
+        int[][] border = new int[n][3];
+
+        for (int j = 0; j < n; j++) {
+            border[j][0] = -1;
+        }
+        
+        for (int i = 0; i < m; i++) {
+            int left = -1;
+            int right = 0;
+
+            for (int j = 0; j < n; j++) {
+                if (a[i][j] == 1) {
+                    if (left < 0) {
+                        left = j;
+                    }
+
+                    right = j;
+                }
+
+                int[] preB = border[j];
+                if (left < 0) {
+                    f[i + 1][j + 1] = f[i][j + 1];
+                } else if (preB[0] < 0) {
+                    f[i + 1][j + 1] = right - left + 1;
+                    border[j][0] = i;
+                    border[j][1] = left;
+                    border[j][2] = right;
+                } else {
+                    int l = Math.min(preB[1], left);
+                    int r = Math.max(preB[2], right);
+                    f[i + 1][j + 1] = (r - l + 1) * (i - preB[0] + 1);
+                    border[j][1] = l;
+                    border[j][2] = r;
+                }
+            }
+        }
+
+        return f;
+    }
+
+    private int[][] rotate(int[][] a) {
+        int m = a.length;
+        int n = a[0].length;
+        int[][] b = new int[n][m];
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                b[j][m - 1 - i] = a[i][j];
             }
         }
         
-        return res;
-    }
-
-    public int minimumSum(int[][] grid) {
-        int[][] rgrid = rotate(grid);
-        
-        return Math.min(solve(grid), solve(rgrid));
+        return b;
     }
 }
