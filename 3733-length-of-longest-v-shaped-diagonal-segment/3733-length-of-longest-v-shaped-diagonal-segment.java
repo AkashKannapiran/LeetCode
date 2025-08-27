@@ -1,69 +1,61 @@
 class Solution {
 
-    private static final int[][] DIRS = {
-        { 1, 1 },
-        { 1, -1 },
-        { -1, -1 },
-        { -1, 1 },
-    };
-    private int[][][][] memo;
-    private int[][] grid;
-    private int m, n;
+    private static final int[][] DIRS = { { 1, 1 },
+            { 1, -1 },
+            { -1, -1 },
+            { -1, 1 } };
 
     public int lenOfVDiagonal(int[][] grid) {
-        this.grid = grid;
-        this.m = grid.length;
-        this.n = grid[0].length;
-        this.memo = new int[m][n][4][2];
+
+        int m = grid.length;
+        int n = grid[0].length;
+        int[][][] memo = new int[m][n][1 << 3];
+        int ans = 0;
 
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                for (int k = 0; k < 4; k++) {
-                    Arrays.fill(memo[i][j][k], -1);
+                if (grid[i][j] != 1) {
+                    continue;
                 }
-            }
-        }
 
-        int res = 0;
-        
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                if (grid[i][j] == 1) {
-                    for (int direction = 0; direction < 4; direction++) {
-                        res = Math.max(res, dfs(i, j, direction, true, 2) + 1);
+                int[] maxs = { m - i, j + 1, i + 1, n - j };
+                for (int k = 0; k < 4; k++) {
+                    if (maxs[k] > ans) {
+                        ans = Math.max(ans, dfs(i, j, k, 1, 2, grid, memo) + 1);
                     }
                 }
             }
         }
-        
-        return res;
+
+        return ans;
     }
 
-    private int dfs(int cx, int cy, int direction, boolean turn, int target) {
-        int nx = cx + DIRS[direction][0];
-        int ny = cy + DIRS[direction][1];
-        
-        if (nx < 0 || ny < 0 || nx >= m || ny >= n || grid[nx][ny] != target) {
+    private int dfs(int i, int j, int k, int canTurn, int target, int[][] grid, int[][][] memo) {
+
+        i += DIRS[k][0];
+        j += DIRS[k][1];
+
+        if (i < 0 || i >= grid.length || j < 0 || j >= grid[i].length || grid[i][j] != target) {
             return 0;
         }
 
-        int turnInt = turn ? 1 : 0;
-        
-        if (memo[nx][ny][direction][turnInt] != -1) {
-            return memo[nx][ny][direction][turnInt];
+        int mask = k << 1 | canTurn;
+
+        if (memo[i][j][mask] > 0) {
+            return memo[i][j][mask];
         }
 
-        int maxStep = dfs(nx, ny, direction, turn, 2 - target);
-        
-        if (turn) {
-            maxStep = Math.max(
-                maxStep,
-                dfs(nx, ny, (direction + 1) % 4, false, 2 - target)
-            );
+        int res = dfs(i, j, k, canTurn, 2 - target, grid, memo);
+
+        if (canTurn == 1) {
+            int[] maxs = { grid.length - i - 1, j, i, grid[i].length - j - 1 };
+            k = (k + 1) % 4;
+
+            if (maxs[k] > res) {
+                res = Math.max(res, dfs(i, j, k, 0, 2 - target, grid, memo));
+            }
         }
-        
-        memo[nx][ny][direction][turnInt] = maxStep + 1;
-        
-        return maxStep + 1;
+
+        return memo[i][j][mask] = res + 1;
     }
 }
