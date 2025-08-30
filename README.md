@@ -562,6 +562,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/AkashKannapiran/LeetCode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
 | [1424-maximum-candies-you-can-get-from-boxes](https://github.com/AkashKannapiran/LeetCode/tree/master/1424-maximum-candies-you-can-get-from-boxes) |
 | [2588-maximum-number-of-points-from-grid-queries](https://github.com/AkashKannapiran/LeetCode/tree/master/2588-maximum-number-of-points-from-grid-queries) |
+| [2793-count-the-number-of-complete-components](https://github.com/AkashKannapiran/LeetCode/tree/master/2793-count-the-number-of-complete-components) |
 | [3633-maximize-the-number-of-target-nodes-after-connecting-trees-i](https://github.com/AkashKannapiran/LeetCode/tree/master/3633-maximize-the-number-of-target-nodes-after-connecting-trees-i) |
 | [3645-maximize-the-number-of-target-nodes-after-connecting-trees-ii](https://github.com/AkashKannapiran/LeetCode/tree/master/3645-maximize-the-number-of-target-nodes-after-connecting-trees-ii) |
 ## Union Find
@@ -569,6 +570,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [1058-lexicographically-smallest-equivalent-string](https://github.com/AkashKannapiran/LeetCode/tree/master/1058-lexicographically-smallest-equivalent-string) |
 | [2588-maximum-number-of-points-from-grid-queries](https://github.com/AkashKannapiran/LeetCode/tree/master/2588-maximum-number-of-points-from-grid-queries) |
+| [2793-count-the-number-of-complete-components](https://github.com/AkashKannapiran/LeetCode/tree/master/2793-count-the-number-of-complete-components) |
 ## Greedy
 |  |
 | ------- |
@@ -633,6 +635,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1350-remove-sub-folders-from-the-filesystem](https://github.com/AkashKannapiran/LeetCode/tree/master/1350-remove-sub-folders-from-the-filesystem) |
 | [2400-minimum-score-after-removals-on-a-tree](https://github.com/AkashKannapiran/LeetCode/tree/master/2400-minimum-score-after-removals-on-a-tree) |
 | [2438-find-closest-node-to-given-two-nodes](https://github.com/AkashKannapiran/LeetCode/tree/master/2438-find-closest-node-to-given-two-nodes) |
+| [2793-count-the-number-of-complete-components](https://github.com/AkashKannapiran/LeetCode/tree/master/2793-count-the-number-of-complete-components) |
 | [3633-maximize-the-number-of-target-nodes-after-connecting-trees-i](https://github.com/AkashKannapiran/LeetCode/tree/master/3633-maximize-the-number-of-target-nodes-after-connecting-trees-i) |
 | [3645-maximize-the-number-of-target-nodes-after-connecting-trees-ii](https://github.com/AkashKannapiran/LeetCode/tree/master/3645-maximize-the-number-of-target-nodes-after-connecting-trees-ii) |
 ## Binary Tree
@@ -735,6 +738,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1986-largest-color-value-in-a-directed-graph](https://github.com/AkashKannapiran/LeetCode/tree/master/1986-largest-color-value-in-a-directed-graph) |
 | [2090-number-of-ways-to-arrive-at-destination](https://github.com/AkashKannapiran/LeetCode/tree/master/2090-number-of-ways-to-arrive-at-destination) |
 | [2438-find-closest-node-to-given-two-nodes](https://github.com/AkashKannapiran/LeetCode/tree/master/2438-find-closest-node-to-given-two-nodes) |
+| [2793-count-the-number-of-complete-components](https://github.com/AkashKannapiran/LeetCode/tree/master/2793-count-the-number-of-complete-components) |
 | [3627-find-minimum-time-to-reach-last-room-i](https://github.com/AkashKannapiran/LeetCode/tree/master/3627-find-minimum-time-to-reach-last-room-i) |
 | [3628-find-minimum-time-to-reach-last-room-ii](https://github.com/AkashKannapiran/LeetCode/tree/master/3628-find-minimum-time-to-reach-last-room-ii) |
 ## Shortest Path
