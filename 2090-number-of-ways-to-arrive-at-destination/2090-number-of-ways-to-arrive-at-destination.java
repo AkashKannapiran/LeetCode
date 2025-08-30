@@ -1,51 +1,59 @@
 class Solution {
-
     private static final int MOD = 1_000_000_007;
 
     public int countPaths(int n, int[][] roads) {
-        long[][][] dp = new long[n][n][2];
+        long[][] graph = new long[n][];
+        
+        for (int i = 0; i < n; i++) {
+            graph[i] = new long[n];
+        }
+        
+        for (int i = 0; i < roads.length; i++) {
+            graph[roads[i][0]][roads[i][1]] = roads[i][2];
+            graph[roads[i][1]][roads[i][0]] = roads[i][2];
+        }
 
-        for (int src = 0; src < n; src++) {
-            for (int dest = 0; dest < n; dest++) {
-                if (src != dest) {
-                    dp[src][dest][0] = (long) 1e12;
-                    dp[src][dest][1] = 0;
-                } else {
-                    dp[src][dest][0] = 0;
-                    dp[src][dest][1] = 1;
+        long[] dist = new long[n];
+        int[] count = new int[n];
+        boolean[] vist = new boolean[n];
+        
+        for (int i = 0; i < n; i++) {
+            dist[i] = Long.MAX_VALUE;
+        }
+
+        dist[0] = 0;
+        count[0] = 1;
+        
+        for (int i = 0; i < n; i++) {
+            long min = Long.MAX_VALUE;
+            int u = -1;
+            
+            for (int j = 0; j < n; j++) {
+                if (!vist[j] && dist[j] < min) {
+                    min = dist[j];
+                    u = j;
+                }
+            }
+            
+            if (u < 0) {
+                break;
+            }
+
+            vist[u] = true;
+            
+            for (int j = 0; j < n; j++) {
+                if (!vist[j] && graph[u][j] != 0) {
+                    long timei = dist[u] + graph[u][j];
+                    
+                    if (timei < dist[j]) {
+                        dist[j] = timei;
+                        count[j] = count[u] % MOD;
+                    } else if (timei == dist[j])
+                        count[j] = (count[j] + count[u]) % MOD;
                 }
             }
         }
-
-        for (int[] road : roads) {
-            int startNode = road[0];
-            int endNode = road[1];
-            int travelTime = road[2];
-            dp[startNode][endNode][0] = travelTime;
-            dp[endNode][startNode][0] = travelTime;
-            dp[startNode][endNode][1] = 1;
-            dp[endNode][startNode][1] = 1;
-        }
-
-        for (int mid = 0; mid < n; mid++) {
-            for (int src = 0; src < n; src++) {
-                for (int dest = 0; dest < n; dest++) {
-                    if (src != mid && dest != mid) {
-                        long newTime = dp[src][mid][0] + dp[mid][dest][0];
-
-                        if (newTime < dp[src][dest][0]) {
-                            dp[src][dest][0] = newTime;
-                            dp[src][dest][1] = (dp[src][mid][1] * dp[mid][dest][1]) % MOD;
-                        } else if (newTime == dp[src][dest][0]) {
-                            dp[src][dest][1] = (dp[src][dest][1] +
-                                                dp[src][mid][1] * dp[mid][dest][1]) %
-                                                MOD;
-                        }
-                    }
-                }
-            }
-        }
-
-        return (int) dp[n - 1][0][1];
+        
+        return count[n - 1];
     }
 }
