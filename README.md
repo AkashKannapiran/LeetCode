@@ -78,6 +78,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2180-maximum-number-of-tasks-you-can-assign](https://github.com/AkashKannapiran/LeetCode/tree/master/2180-maximum-number-of-tasks-you-can-assign) |
 | [2204-find-subsequence-of-length-k-with-the-largest-sum](https://github.com/AkashKannapiran/LeetCode/tree/master/2204-find-subsequence-of-length-k-with-the-largest-sum) |
 | [2215-finding-3-digit-even-numbers](https://github.com/AkashKannapiran/LeetCode/tree/master/2215-finding-3-digit-even-numbers) |
+| [2220-find-all-possible-recipes-from-given-supplies](https://github.com/AkashKannapiran/LeetCode/tree/master/2220-find-all-possible-recipes-from-given-supplies) |
 | [2229-maximum-fruits-harvested-after-at-most-k-steps](https://github.com/AkashKannapiran/LeetCode/tree/master/2229-maximum-fruits-harvested-after-at-most-k-steps) |
 | [2237-longest-palindrome-by-concatenating-two-letter-words](https://github.com/AkashKannapiran/LeetCode/tree/master/2237-longest-palindrome-by-concatenating-two-letter-words) |
 | [2249-count-the-hidden-sequences](https://github.com/AkashKannapiran/LeetCode/tree/master/2249-count-the-hidden-sequences) |
@@ -286,6 +287,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2079-delete-duplicate-folders-in-system](https://github.com/AkashKannapiran/LeetCode/tree/master/2079-delete-duplicate-folders-in-system) |
 | [2204-find-subsequence-of-length-k-with-the-largest-sum](https://github.com/AkashKannapiran/LeetCode/tree/master/2204-find-subsequence-of-length-k-with-the-largest-sum) |
 | [2215-finding-3-digit-even-numbers](https://github.com/AkashKannapiran/LeetCode/tree/master/2215-finding-3-digit-even-numbers) |
+| [2220-find-all-possible-recipes-from-given-supplies](https://github.com/AkashKannapiran/LeetCode/tree/master/2220-find-all-possible-recipes-from-given-supplies) |
 | [2237-longest-palindrome-by-concatenating-two-letter-words](https://github.com/AkashKannapiran/LeetCode/tree/master/2237-longest-palindrome-by-concatenating-two-letter-words) |
 | [2479-meeting-rooms-iii](https://github.com/AkashKannapiran/LeetCode/tree/master/2479-meeting-rooms-iii) |
 | [2520-using-a-robot-to-print-the-lexicographically-smallest-string](https://github.com/AkashKannapiran/LeetCode/tree/master/2520-using-a-robot-to-print-the-lexicographically-smallest-string) |
@@ -331,6 +333,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1960-check-if-the-sentence-is-pangram](https://github.com/AkashKannapiran/LeetCode/tree/master/1960-check-if-the-sentence-is-pangram) |
 | [2079-delete-duplicate-folders-in-system](https://github.com/AkashKannapiran/LeetCode/tree/master/2079-delete-duplicate-folders-in-system) |
 | [2140-longest-subsequence-repeated-k-times](https://github.com/AkashKannapiran/LeetCode/tree/master/2140-longest-subsequence-repeated-k-times) |
+| [2220-find-all-possible-recipes-from-given-supplies](https://github.com/AkashKannapiran/LeetCode/tree/master/2220-find-all-possible-recipes-from-given-supplies) |
 | [2237-longest-palindrome-by-concatenating-two-letter-words](https://github.com/AkashKannapiran/LeetCode/tree/master/2237-longest-palindrome-by-concatenating-two-letter-words) |
 | [2260-divide-a-string-into-groups-of-size-k](https://github.com/AkashKannapiran/LeetCode/tree/master/2260-divide-a-string-into-groups-of-size-k) |
 | [2346-largest-3-same-digit-number-in-string](https://github.com/AkashKannapiran/LeetCode/tree/master/2346-largest-3-same-digit-number-in-string) |
@@ -741,6 +744,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1424-maximum-candies-you-can-get-from-boxes](https://github.com/AkashKannapiran/LeetCode/tree/master/1424-maximum-candies-you-can-get-from-boxes) |
 | [1986-largest-color-value-in-a-directed-graph](https://github.com/AkashKannapiran/LeetCode/tree/master/1986-largest-color-value-in-a-directed-graph) |
 | [2090-number-of-ways-to-arrive-at-destination](https://github.com/AkashKannapiran/LeetCode/tree/master/2090-number-of-ways-to-arrive-at-destination) |
+| [2220-find-all-possible-recipes-from-given-supplies](https://github.com/AkashKannapiran/LeetCode/tree/master/2220-find-all-possible-recipes-from-given-supplies) |
 | [2438-find-closest-node-to-given-two-nodes](https://github.com/AkashKannapiran/LeetCode/tree/master/2438-find-closest-node-to-given-two-nodes) |
 | [2793-count-the-number-of-complete-components](https://github.com/AkashKannapiran/LeetCode/tree/master/2793-count-the-number-of-complete-components) |
 | [3627-find-minimum-time-to-reach-last-room-i](https://github.com/AkashKannapiran/LeetCode/tree/master/3627-find-minimum-time-to-reach-last-room-i) |
@@ -756,6 +760,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [1986-largest-color-value-in-a-directed-graph](https://github.com/AkashKannapiran/LeetCode/tree/master/1986-largest-color-value-in-a-directed-graph) |
 | [2090-number-of-ways-to-arrive-at-destination](https://github.com/AkashKannapiran/LeetCode/tree/master/2090-number-of-ways-to-arrive-at-destination) |
+| [2220-find-all-possible-recipes-from-given-supplies](https://github.com/AkashKannapiran/LeetCode/tree/master/2220-find-all-possible-recipes-from-given-supplies) |
 ## Memoization
 |  |
 | ------- |
