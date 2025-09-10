@@ -1,39 +1,34 @@
 class Solution {
-
-    public int minimumTeachings(int n, int[][] languages, int[][] friendships) {
-        Set<Integer> cncon = new HashSet<>();
+    public int minimumTeachings(int n, int[][] L, int[][] F) {
+        BitSet[] bit = new BitSet[L.length];
+        Arrays.setAll(bit, o -> new BitSet(n + 1));
         
-        for (int[] friendship : friendships) {
-            Map<Integer, Integer> mp = new HashMap<>();
-            boolean conm = false;
-            
-            for (int lan : languages[friendship[0] - 1]) {
-                mp.put(lan, 1);
-            }
-            
-            for (int lan : languages[friendship[1] - 1]) {
-                if (mp.containsKey(lan)) {
-                    conm = true;
-                    break;
-                }
-            }
-            
-            if (!conm) {
-                cncon.add(friendship[0] - 1);
-                cncon.add(friendship[1] - 1);
-            }
-        }
-
-        int max_cnt = 0;
-        int[] cnt = new int[n + 1];
-        
-        for (int friendship : cncon) {
-            for (int lan : languages[friendship]) {
-                cnt[lan]++;
-                max_cnt = Math.max(max_cnt, cnt[lan]);
+        for (int i = 0; i < L.length; i++){
+            for (int l : L[i]){
+                bit[i].set(l);
             }
         }
         
-        return cncon.size() - max_cnt;
+        Set<Integer> teach = new HashSet<>();
+        
+        for (int[] f : F){
+            BitSet t = (BitSet)bit[f[0] - 1].clone();
+            t.and(bit[f[1] - 1]);
+            
+            if (t.isEmpty()){
+                teach.add(f[0] - 1);
+                teach.add(f[1] - 1);
+            }
+        }
+
+        int[] count = new int[n + 1];
+        
+        for (int person : teach){
+            for (int l : L[person]){
+                count[l]++;
+            }
+        }
+
+        return teach.size() - Arrays.stream(count).max().getAsInt();
     }
 }
