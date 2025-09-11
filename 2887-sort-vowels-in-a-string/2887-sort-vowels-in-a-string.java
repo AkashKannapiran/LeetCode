@@ -1,35 +1,42 @@
 class Solution {
-    boolean isVowel(Character c) {
-        return c == 'a' || c == 'e' || c == 'o'|| c == 'u'|| c == 'i'
-                || c == 'A' || c == 'E' || c == 'O'|| c == 'U'|| c == 'I';
-    }
-
     public String sortVowels(String s) {
-        int[] count = new int[1000];
+        char[] vowels = { 'A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u' };
+        int[] stringCharCount = new int[128];
+        char[] sChars = s.toCharArray();
 
-        for (char c : s.toCharArray()) {
-            if (isVowel(c)) {
-                count[c - 'A']++;
+        for (char ch : sChars) {
+            stringCharCount[ch]++;
+        }
+
+        boolean found = false;
+
+        for (char ch : vowels) {
+            found |= stringCharCount[ch] > 0;
+        }
+
+        if (!found) {
+            return s;
+        }
+
+        boolean[] isVowels = new boolean[128];
+
+        for (char ch : vowels) {
+            if (stringCharCount[ch] > 0) {
+                isVowels[ch] = true;
             }
         }
 
-        String sortedVowel = "AEIOUaeiou";
-        StringBuilder ans = new StringBuilder();
-        int j = 0;
+        int left = 0;
 
-        for (int i = 0; i < s.length(); i++) {
-            if (!isVowel(s.charAt(i))) {
-                ans.append(s.charAt(i));
-            } else {
-                while (count[sortedVowel.charAt(j) - 'A'] == 0) {
-                    j++;
-                }
-
-                ans.append(sortedVowel.charAt(j));
-                count[sortedVowel.charAt(j) - 'A']--;
+        for (char v : vowels) {
+            while (stringCharCount[v] > 0) {
+                char ch = sChars[left];
+                stringCharCount[v] -= isVowels[ch] ? 1 : 0;
+                sChars[left] = isVowels[ch] ? v : ch;
+                left++;
             }
         }
-        
-        return ans.toString();
+
+        return new String(sChars);
     }
-};
+}
