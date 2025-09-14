@@ -1,64 +1,64 @@
 class Solution {
-    Set<String> words_perfect;
-    Map<String, String> words_cap;
-    Map<String, String> words_vow;
-
     public String[] spellchecker(String[] wordlist, String[] queries) {
-        words_perfect = new HashSet();
-        words_cap = new HashMap();
-        words_vow = new HashMap();
+        int m = wordlist.length;
+        int n = queries.length;
 
-        for (String word: wordlist) {
-            words_perfect.add(word);
+        String[] res = new String[n];
 
-            String wordlow = word.toLowerCase();
-            words_cap.putIfAbsent(wordlow, word);
+        Map<String, Integer> caseSense = new HashMap<>();
+        Map<String, Integer> caseInsense = new HashMap<>();
+        Map<String, Integer> vowelErrors = new HashMap<>();
 
-            String wordlowDV = devowel(wordlow);
-            words_vow.putIfAbsent(wordlowDV, word);
+        for (int i = m - 1; i >= 0; i--) {
+            String word = wordlist[i];
+            caseSense.put(word, i);
+            String lowerCase = word.toLowerCase();
+            char[] vowelRepArr = lowerCase.toCharArray();
+
+            for (int j = 0; j < vowelRepArr.length; j++) {
+                if (vowelRepArr[j] == 'e' || vowelRepArr[j] == 'i' || vowelRepArr[j] == 'o' || vowelRepArr[j] == 'u') {
+                    vowelRepArr[j] = 'a';
+                }
+            }
+
+            caseInsense.put(lowerCase, i);
+            vowelErrors.put(new String(vowelRepArr), i);
         }
 
-        String[] ans = new String[queries.length];
-        int t = 0;
-        
-        for (String query: queries) {
-            ans[t++] = solve(query);
+        for (int i = 0; i < n; i++) {
+            String word = queries[i];
+
+            if (caseSense.containsKey(word)) {
+                res[i] = word;
+                continue;
+            }
+
+            String lowerCase = word.toLowerCase();
+
+            if (caseInsense.containsKey(lowerCase)) {
+                res[i] = wordlist[caseInsense.get(lowerCase)];
+                continue;
+            }
+
+            char[] vowelRepArr = lowerCase.toCharArray();
+
+            for (int j = 0; j < vowelRepArr.length; j++) {
+                if (vowelRepArr[j] == 'e' || vowelRepArr[j] == 'i' || vowelRepArr[j] == 'o' || vowelRepArr[j] == 'u') {
+                    vowelRepArr[j] = 'a';
+                }
+            }
+
+            String vowelRepStr = new String(vowelRepArr);
+
+            if (vowelErrors.containsKey(vowelRepStr)) {
+                res[i] = wordlist[vowelErrors.get(vowelRepStr)];
+                continue;
+            }
+
+            res[i] = "";
         }
 
-        return ans;
-    }
+        return res;
 
-    public String solve(String query) {
-        if (words_perfect.contains(query)) {
-            return query;
-        }
-
-        String queryL = query.toLowerCase();
-        
-        if (words_cap.containsKey(queryL)) {
-            return words_cap.get(queryL);
-        }
-
-        String queryLV = devowel(queryL);
-        
-        if (words_vow.containsKey(queryLV)) {
-            return words_vow.get(queryLV);
-        }
-
-        return "";
-    }
-
-    public String devowel(String word) {
-        StringBuilder ans = new StringBuilder();
-        
-        for (char c: word.toCharArray()) {
-            ans.append(isVowel(c) ? '*' : c);
-        }
-        
-        return ans.toString();
-    }
-
-    public boolean isVowel(char c) {
-        return (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
     }
 }
