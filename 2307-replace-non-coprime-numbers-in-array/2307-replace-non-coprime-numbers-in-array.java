@@ -1,31 +1,33 @@
 class Solution {
     public List<Integer> replaceNonCoprimes(int[] nums) {
-        List<Integer> stack = new ArrayList<>();
+
+        int n = nums.length;
+        int[] stack = new int[n];
+        int top = -1;
 
         for (int num : nums) {
-            while (!stack.isEmpty()) {
-                int top = stack.get(stack.size() - 1);
-                int g = gcd(top, num);
+            while (top != -1) {
+                int x = gcd(stack[top], num);
 
-                if (g == 1) {
+                if (x == 1) {
                     break;
                 }
 
-                stack.remove(stack.size() - 1);
-                num = (top / g) * num;
+                num *= stack[top--] / x;
             }
 
-            stack.add(num);
+            stack[++top] = num;
         }
 
-        return stack;
+        List<Integer> result = new ArrayList<Integer>(top + 1);
+        for (int i = 0; i <= top; ++i) {
+            result.add(stack[i]);
+        }
+
+        return result;
     }
 
-    private int gcd(int a, int b) {
-        if (b == 0) {
-            return a;
-        }
-
-        return gcd(b, a % b);
+    public int gcd(int a, int b) {
+        return b == 0 ? a : gcd(b, a % b);
     }
 }
