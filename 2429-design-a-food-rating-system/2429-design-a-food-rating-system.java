@@ -1,42 +1,67 @@
 class FoodRatings {
-    private Map<String, Integer> foodRatingMap = new HashMap<>();
-    private Map<String, String> foodCuisineMap = new HashMap<>();
-    private Map<String, TreeSet<Pair<Integer, String>>> cuisineFoodMap = new HashMap<>();
 
-    public FoodRatings(String[] foods, String[] cuisines, int[] ratings) {
-        for (int i = 0; i < foods.length; ++i) {
-            foodRatingMap.put(foods[i], ratings[i]);
-            foodCuisineMap.put(foods[i], cuisines[i]);
+    static class Food {
+        String name;
+        String cuisine;
+        int rating;
 
-            cuisineFoodMap
-                .computeIfAbsent(cuisines[i], k -> new TreeSet<>((a, b) -> {
-                    int compareByRating = Integer.compare(a.getKey(), b.getKey());
-                    
-                    if (compareByRating == 0) {
-                        return a.getValue().compareTo(b.getValue());
-                    }
-
-                    return compareByRating;
-                }))
-                .add(new Pair(-ratings[i], foods[i]));
+        Food(String name, String cuisine, int rating) {
+            this.name = name;
+            this.cuisine = cuisine;
+            this.rating = rating;
         }
     }
 
-    public void changeRating(String food, int newRating) {
-        String cuisineName = foodCuisineMap.get(food);
+    private Map<String, Food> foodMap;
 
-        TreeSet<Pair<Integer, String>> cuisineSet = cuisineFoodMap.get(cuisineName);
-        Pair<Integer, String> oldElement = new Pair<>(-foodRatingMap.get(food), food);
-        cuisineSet.remove(oldElement);
+    private Map<String, PriorityQueue<Food>> cuisineToMaxHeap;
 
-        foodRatingMap.put(food, newRating);
-        cuisineSet.add(new Pair<>(-newRating, food));
+    public FoodRatings(String[] foods, String[] cuisines, int[] ratings) {
+        foodMap = new HashMap<>();
+        cuisineToMaxHeap = new HashMap<>();
+
+        for (int i = 0; i < foods.length; i++) {
+            Food food = new Food(foods[i], cuisines[i], ratings[i]);
+            foodMap.put(foods[i], food);
+
+            cuisineToMaxHeap
+                .computeIfAbsent(cuisines[i], k -> new PriorityQueue<>(
+                    (a, b) -> {
+                        if (b.rating != a.rating) {
+                            return b.rating - a.rating;
+                        }
+
+                        return a.name.compareTo(b.name);
+                    }
+                ))
+                .add(food);
+        }
+    }
+
+    public void changeRating(String foodName, int newRating) {
+        Food oldFood = foodMap.get(foodName);
+        Food updatedFood = new Food(foodName, oldFood.cuisine, newRating);
+        
+        foodMap.put(foodName, updatedFood);
+        
+        cuisineToMaxHeap.get(oldFood.cuisine).add(updatedFood);
     }
 
     public String highestRated(String cuisine) {
-        Pair<Integer, String> highestRated = cuisineFoodMap.get(cuisine).first();
+        PriorityQueue<Food> pq = cuisineToMaxHeap.get(cuisine);
 
-        return highestRated.getValue();
+        while (!pq.isEmpty()) {
+            Food top = pq.peek();
+            Food latest = foodMap.get(top.name);
+            
+            if (top.rating == latest.rating) {
+                return top.name;
+            } else {
+                pq.poll();
+            }
+        }
+        
+        return "";
     }
 }
 
