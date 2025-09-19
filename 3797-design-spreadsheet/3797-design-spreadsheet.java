@@ -1,33 +1,39 @@
 class Spreadsheet {
 
-    private Map<String, Integer> cells = new HashMap<>();
-
     public Spreadsheet(int rows) {
-
+        
     }
 
+    Map<String, Integer> map = new HashMap<>(); 
+    
     public void setCell(String cell, int value) {
-        cells.put(cell, value);
+        map.put(cell, value);
     }
-
+    
     public void resetCell(String cell) {
-        cells.remove(cell);
+        map.remove(cell);
     }
-
+    
     public int getValue(String formula) {
-        int idx = formula.indexOf('+');
-        String left = formula.substring(1, idx);
-        String right = formula.substring(idx + 1);
+        int io = formula.indexOf('+');
+        String cell1 = formula.substring(1, io);     
+        String cell2 = formula.substring(io + 1); 
+        
+        int val1;
+        if (cell1.charAt(0) > '9') {
+            val1 = map.getOrDefault(cell1, 0);
+        } else {
+            val1 = Integer.parseInt(cell1);
+        }
 
-        int valLeft = Character.isLetter(left.charAt(0))
-                ? cells.getOrDefault(left, 0)
-                : Integer.parseInt(left);
+        int val2;
+        if (cell2.charAt(0) > '9') {
+            val2 = map.getOrDefault(cell2, 0);
+        } else {
+            val2 = Integer.parseInt(cell2);
+        }
 
-        int valRight = Character.isLetter(right.charAt(0))
-                ? cells.getOrDefault(right, 0)
-                : Integer.parseInt(right);
-
-        return valLeft + valRight;
+        return val1 + val2;
     }
 }
 
