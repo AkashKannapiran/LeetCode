@@ -1,52 +1,54 @@
 class TaskManager {
-    private PriorityQueue<int[]> pq;
-    private Map<Integer, Integer> taskPriority;
-    private Map<Integer, Integer> taskOwner;
+    int[] priorities = new int[100001];
+    int[] userIds = new int[100001];
+    PriorityQueue<Long> PQ = new PriorityQueue<>((a, b) -> Long.compare(b, a));
 
     public TaskManager(List<List<Integer>> tasks) {
-        pq = new PriorityQueue<>((a, b) -> {
-            if (b[0] != a[0]) {
-                return b[0] - a[0];
-            }
+        for (List<Integer> task : tasks) {
+            int userId = task.get(0);
+            int taskId = task.get(1);
+            int priority = task.get(2);
 
-            return b[1] - a[1];
-        });
-
-        taskPriority = new HashMap<>();
-        taskOwner = new HashMap<>();
-
-        for (List<Integer> t : tasks) {
-            add(t.get(0), t.get(1), t.get(2));
+            priorities[taskId] = priority;
+            userIds[taskId] = userId;
+            PQ.offer((long) priority * 100001 + taskId);
         }
     }
 
     public void add(int userId, int taskId, int priority) {
-        pq.add(new int[] { priority, taskId });
-        taskPriority.put(taskId, priority);
-        taskOwner.put(taskId, userId);
+        if (priorities[taskId] > 0) {
+            return;
+        }
+
+        priorities[taskId] = priority;
+        userIds[taskId] = userId;
+        PQ.offer((long) priority * 100001 + taskId);
     }
 
     public void edit(int taskId, int newPriority) {
-        pq.add(new int[] { newPriority, taskId });
-        taskPriority.put(taskId, newPriority);
+        priorities[taskId] = newPriority;
+        PQ.offer((long) newPriority * 100001 + taskId);
     }
 
     public void rmv(int taskId) {
-        taskPriority.put(taskId, -1);
+        priorities[taskId] = -1;
     }
 
     public int execTop() {
-        while (!pq.isEmpty()) {
-            int[] t = pq.poll();
-            int p = t[0], id = t[1];
-
-            if (taskPriority.getOrDefault(id, -2) == p) {
-                taskPriority.put(id, -1);
-
-                return taskOwner.getOrDefault(id, -1);
+        while (!PQ.isEmpty()) {
+            long current = PQ.poll();
+            int taskId = (int) (current % 100001);
+            int priority = (int) (current / 100001);
+            
+            if (priorities[taskId] != priority) {
+                continue;
             }
-        }
 
+            priorities[taskId] = -1;
+            
+            return userIds[taskId];
+        }
+        
         return -1;
     }
 }
