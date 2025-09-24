@@ -1,41 +1,76 @@
+
 class Solution {
     public String fractionToDecimal(int numerator, int denominator) {
-        if (numerator == 0) {
+        long lnum = numerator, lden = denominator;
+
+        if (lnum == 0) {
             return "0";
         }
 
-        StringBuilder fraction = new StringBuilder();
-
-        if (numerator < 0 ^ denominator < 0) {
-            fraction.append("-");
+        if (lnum % lden == 0) {
+            return Long.toString(lnum / lden);
         }
 
-        long dividend = Math.abs(Long.valueOf(numerator));
-        long divisor = Math.abs(Long.valueOf(denominator));
+        StringBuilder number = new StringBuilder();
 
-        fraction.append(dividend / divisor);
-        long remainder = dividend % divisor;
-
-        if (remainder == 0) {
-            return fraction.toString();
+        if ((lden < 0) ^ (lnum < 0)) {
+            number.append('-');
         }
 
-        fraction.append(".");
-        Map<Long, Integer> map = new HashMap<>();
+        lnum = Math.abs(lnum);
+        lden = Math.abs(lden);
 
-        while (remainder != 0) {
-            if (map.containsKey(remainder)) {
-                fraction.insert(map.get(remainder), "(");
-                fraction.append(")");
-                break;
+        number.append(lnum / lden);
+        number.append('.');
+
+        long GCD = gcd(lnum, lden);
+        lnum /= GCD;
+        lden /= GCD;
+
+        lnum %= lden;
+        lnum *= 10;
+
+        int twos = 0, fives = 0;
+        long temp = lden;
+
+        while (temp % 2 == 0) {
+            twos++;
+            temp /= 2;
+        }
+
+        while (temp % 5 == 0) {
+            fives++;
+            temp /= 5;
+        }
+
+        if (temp == 1) {
+            while (lnum != 0) {
+                number.append(lnum / lden);
+                lnum = (lnum % lden) * 10;
+            }
+        } else {
+            int nonRepLen = Math.max(twos, fives);
+
+            for (int i = 0; i < nonRepLen; i++) {
+                number.append(lnum / lden);
+                lnum = (lnum % lden) * 10;
             }
 
-            map.put(remainder, fraction.length());
-            remainder *= 10;
-            fraction.append(remainder / divisor);
-            remainder %= divisor;
+            long initRem = lnum;
+            StringBuilder repeating = new StringBuilder();
+
+            do {
+                repeating.append(lnum / lden);
+                lnum = (lnum % lden) * 10;
+            } while (lnum != initRem);
+
+            number.append('(').append(repeating.toString()).append(')');
         }
 
-        return fraction.toString();
+        return number.toString();
+    }
+
+    private long gcd(long a, long b) {
+        return (b == 0) ? a : gcd(b, a % b);
     }
 }
