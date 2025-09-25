@@ -22,6 +22,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0169-majority-element](https://github.com/AkashKannapiran/LeetCode/tree/master/0169-majority-element) |
 | [0217-contains-duplicate](https://github.com/AkashKannapiran/LeetCode/tree/master/0217-contains-duplicate) |
 | [0221-maximal-square](https://github.com/AkashKannapiran/LeetCode/tree/master/0221-maximal-square) |
+| [0268-missing-number](https://github.com/AkashKannapiran/LeetCode/tree/master/0268-missing-number) |
 | [0283-move-zeroes](https://github.com/AkashKannapiran/LeetCode/tree/master/0283-move-zeroes) |
 | [0368-largest-divisible-subset](https://github.com/AkashKannapiran/LeetCode/tree/master/0368-largest-divisible-subset) |
 | [0416-partition-equal-subset-sum](https://github.com/AkashKannapiran/LeetCode/tree/master/0416-partition-equal-subset-sum) |
@@ -171,6 +172,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0169-majority-element](https://github.com/AkashKannapiran/LeetCode/tree/master/0169-majority-element) |
 | [0217-contains-duplicate](https://github.com/AkashKannapiran/LeetCode/tree/master/0217-contains-duplicate) |
 | [0242-valid-anagram](https://github.com/AkashKannapiran/LeetCode/tree/master/0242-valid-anagram) |
+| [0268-missing-number](https://github.com/AkashKannapiran/LeetCode/tree/master/0268-missing-number) |
 | [0368-largest-divisible-subset](https://github.com/AkashKannapiran/LeetCode/tree/master/0368-largest-divisible-subset) |
 | [0389-find-the-difference](https://github.com/AkashKannapiran/LeetCode/tree/master/0389-find-the-difference) |
 | [0594-longest-harmonious-subsequence](https://github.com/AkashKannapiran/LeetCode/tree/master/0594-longest-harmonious-subsequence) |
@@ -288,6 +290,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0169-majority-element](https://github.com/AkashKannapiran/LeetCode/tree/master/0169-majority-element) |
 | [0217-contains-duplicate](https://github.com/AkashKannapiran/LeetCode/tree/master/0217-contains-duplicate) |
 | [0242-valid-anagram](https://github.com/AkashKannapiran/LeetCode/tree/master/0242-valid-anagram) |
+| [0268-missing-number](https://github.com/AkashKannapiran/LeetCode/tree/master/0268-missing-number) |
 | [0389-find-the-difference](https://github.com/AkashKannapiran/LeetCode/tree/master/0389-find-the-difference) |
 | [0594-longest-harmonious-subsequence](https://github.com/AkashKannapiran/LeetCode/tree/master/0594-longest-harmonious-subsequence) |
 | [0768-partition-labels](https://github.com/AkashKannapiran/LeetCode/tree/master/0768-partition-labels) |
@@ -400,6 +403,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0231-power-of-two](https://github.com/AkashKannapiran/LeetCode/tree/master/0231-power-of-two) |
+| [0268-missing-number](https://github.com/AkashKannapiran/LeetCode/tree/master/0268-missing-number) |
 | [0342-power-of-four](https://github.com/AkashKannapiran/LeetCode/tree/master/0342-power-of-four) |
 | [0389-find-the-difference](https://github.com/AkashKannapiran/LeetCode/tree/master/0389-find-the-difference) |
 | [0861-flipping-an-image](https://github.com/AkashKannapiran/LeetCode/tree/master/0861-flipping-an-image) |
@@ -426,6 +430,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0069-sqrtx](https://github.com/AkashKannapiran/LeetCode/tree/master/0069-sqrtx) |
 | [0166-fraction-to-recurring-decimal](https://github.com/AkashKannapiran/LeetCode/tree/master/0166-fraction-to-recurring-decimal) |
 | [0231-power-of-two](https://github.com/AkashKannapiran/LeetCode/tree/master/0231-power-of-two) |
+| [0268-missing-number](https://github.com/AkashKannapiran/LeetCode/tree/master/0268-missing-number) |
 | [0326-power-of-three](https://github.com/AkashKannapiran/LeetCode/tree/master/0326-power-of-three) |
 | [0342-power-of-four](https://github.com/AkashKannapiran/LeetCode/tree/master/0342-power-of-four) |
 | [0368-largest-divisible-subset](https://github.com/AkashKannapiran/LeetCode/tree/master/0368-largest-divisible-subset) |
@@ -520,6 +525,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0035-search-insert-position](https://github.com/AkashKannapiran/LeetCode/tree/master/0035-search-insert-position) |
 | [0069-sqrtx](https://github.com/AkashKannapiran/LeetCode/tree/master/0069-sqrtx) |
+| [0268-missing-number](https://github.com/AkashKannapiran/LeetCode/tree/master/0268-missing-number) |
 | [1621-number-of-subsequences-that-satisfy-the-given-sum-condition](https://github.com/AkashKannapiran/LeetCode/tree/master/1621-number-of-subsequences-that-satisfy-the-given-sum-condition) |
 | [1851-maximum-number-of-events-that-can-be-attended-ii](https://github.com/AkashKannapiran/LeetCode/tree/master/1851-maximum-number-of-events-that-can-be-attended-ii) |
 | [2150-kth-smallest-product-of-two-sorted-arrays](https://github.com/AkashKannapiran/LeetCode/tree/master/2150-kth-smallest-product-of-two-sorted-arrays) |
