@@ -3,14 +3,15 @@ class Solution {
         if (x < 0) {
             return false;
         }
-        String str = String.valueOf(x);
 
-        for (int i = 0; i < str.length() / 2; i++) {
-            if (str.charAt(i) != str.charAt(str.length() - 1 - i)) {
-                return false;
-            }
+        int reverse = 0;
+        int copyOfX = x;
+
+        while (x > 0) {
+            reverse = (reverse * 10) + (x % 10);
+            x /= 10;
         }
 
-        return true;
+        return reverse == copyOfX;
     }
 }
