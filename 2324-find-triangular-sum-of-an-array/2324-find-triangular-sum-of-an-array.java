@@ -73,10 +73,14 @@ class Solution {
     }
     
     static int triangularSumSlow(int[] nums) {
-                                                                                                                                                                                                                                                                                                                                                            int[] a = Arrays.copyOf(nums, nums.length);
-                                                                                                                                                                                                                                                                                                                                                                    for (int len = a.length; len > 1; len--) {
-                                                                                                                                                                                                                                                                                                                                                                                for (int j = 0; j < len - 1; j++) a[j] = (a[j] + a[j+1]) % 10;
-                                                                                                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                                                                                                                return a[0];
-                                                                                                                                                                                                                                                                                                                                                                                                    }
-                                                                                                                                                                                                                                                                                                                                                                                                    }
+        int[] a = Arrays.copyOf(nums, nums.length);
+        
+        for (int len = a.length; len > 1; len--) {
+            for (int j = 0; j < len - 1; j++) {
+                a[j] = (a[j] + a[j+1]) % 10;
+            }
+        }
+        
+        return a[0];
+    }
+}
