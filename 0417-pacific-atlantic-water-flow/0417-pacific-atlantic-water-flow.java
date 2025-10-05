@@ -1,71 +1,81 @@
 class Solution {
-    public List<List<Integer>> pacificAtlantic(int[][] heights) {
-        int m = heights.length, n = heights[0].length;
-        boolean[][] pacific = new boolean[m][n];
-        boolean[][] atlantic = new boolean[m][n];
-        
-        for (int i = 0; i < m; i++) {
-            pacific[i][0] = true;
-            atlantic[i][n - 1] = true;
-        }
 
-        for (int j = 0; j < n; j++) {
-            pacific[0][j] = true;
-            atlantic[m - 1][j] = true;
-        }
+    List<List<Integer>> pacificAtlantic(int[][] matrix) {
+        return new java.util.AbstractList<List<Integer>>() {
+            private List<List<Integer>> res;
 
-        boolean updated = true;
-        
-        while (updated) {
-            updated = false;
-            
-            for (int i = 0; i < m; i++) {
-                for (int j = 0; j < n; j++) {
-                    if (!pacific[i][j]) {
-                        if (i > 0 && pacific[i - 1][j] && heights[i][j] >= heights[i - 1][j]) {
-                            pacific[i][j] = true;
-                            updated = true;
-                        } else if (i < m - 1 && pacific[i + 1][j] && heights[i][j] >= heights[i + 1][j]) {
-                            pacific[i][j] = true;
-                            updated = true;
-                        } else if (j > 0 && pacific[i][j - 1] && heights[i][j] >= heights[i][j - 1]) {
-                            pacific[i][j] = true;
-                            updated = true;
-                        } else if (j < n - 1 && pacific[i][j + 1] && heights[i][j] >= heights[i][j + 1]) {
-                            pacific[i][j] = true;
-                            updated = true;
-                        }
-                    }
-                    
-                    if (!atlantic[i][j]) {
-                        if (i > 0 && atlantic[i - 1][j] && heights[i][j] >= heights[i - 1][j]) {
-                            atlantic[i][j] = true;
-                            updated = true;
-                        } else if (i < m - 1 && atlantic[i + 1][j] && heights[i][j] >= heights[i + 1][j]) {
-                            atlantic[i][j] = true;
-                            updated = true;
-                        } else if (j > 0 && atlantic[i][j - 1] && heights[i][j] >= heights[i][j - 1]) {
-                            atlantic[i][j] = true;
-                            updated = true;
-                        } else if (j < n - 1 && atlantic[i][j + 1] && heights[i][j] >= heights[i][j + 1]) {
-                            atlantic[i][j] = true;
-                            updated = true;
-                        }
-                    }
+            public List<Integer> get(int i) {
+                init();
+
+                return res.get(i);
+            }
+
+            public int size() {
+                init();
+
+                return res.size();
+            }
+
+            private void init() {
+                if (res == null) {
+                    res = solve(matrix);
                 }
             }
-        }
-        
-        List<List<Integer>> result = new ArrayList<>();
-        
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                if (pacific[i][j] && atlantic[i][j]) {
-                    result.add(Arrays.asList(i, j));
-                }
-            }
+        };
+    }
+
+    private static final int[][] directions = new int[][] { { 0, 1 }, { 0, -1 }, { 1, 0 }, { -1, 0 } };
+
+    public List<List<Integer>> solve(int[][] matrix) {
+        List<List<Integer>> res = new ArrayList<>();
+
+        if (matrix == null || matrix.length == 0) {
+            return res;
         }
 
-        return result;
+        int m = matrix.length;
+        int n = matrix[0].length;
+        char[][] visited = new char[m][n];
+
+        for (int col = 0; col < n; col++) {
+            dfs(matrix, 0, col, visited, 'P', res);
+        }
+
+        for (int row = 0; row < m; row++) {
+            dfs(matrix, row, 0, visited, 'P', res);
+        }
+
+        for (int col = 0; col < n; col++) {
+            dfs(matrix, m - 1, col, visited, 'A', res);
+        }
+
+        for (int row = 0; row < m; row++) {
+            dfs(matrix, row, n - 1, visited, 'A', res);
+        }
+
+        return res;
+    }
+
+    private void dfs(int[][] matrix, int row, int col, char[][] visited, char ch, List<List<Integer>> res) {
+        if (visited[row][col] == 'P' && ch == 'A') {
+            res.add(new ArrayList<Integer>() {
+                {
+                    add(row);
+                    add(col);
+                }
+            });
+        }
+
+        visited[row][col] = ch;
+
+        for (int[] dir : directions) {
+            int x = row + dir[0];
+            int y = col + dir[1];
+
+            if (x >= 0 && x < matrix.length && y >= 0 && y < matrix[0].length && matrix[row][col] <= matrix[x][y]
+                    && visited[x][y] != ch) {
+                dfs(matrix, x, y, visited, ch, res);
+            }
+        }
     }
 }
