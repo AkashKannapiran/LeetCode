@@ -1,58 +1,58 @@
 class Solution {
     
+    int len;
+    final static int[][] dirs = new int[][]{{1,0},{0,1},{-1,0},{0,-1}};
+
     public int swimInWater(int[][] grid) {
         
-        int m = grid.length;
-        int n = grid[0].length;
+        len = grid.length;
+        int left = Math.max(grid[0][0], grid[len - 1][len - 1]), right = len * len - 1;
+        int mid = 0;
+        int res = 0;
 
-        List<int[]> edges = new ArrayList<>();
-
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                if (i > 0) {
-                    edges.add(new int[]{Math.max(grid[i][j], grid[i-1][j]), i*n+j, (i-1)*n+j});
-                }
-
-                if (j > 0) {
-                    edges.add(new int[]{Math.max(grid[i][j], grid[i][j-1]), i*n+j, i*n+j-1});
-                }
-
-            }
-
-        }
-
-        Collections.sort(edges, (a, b) -> a[0] - b[0]);
-        int[] parent = new int[m * n];
-
-        for (int i = 0; i < m * n; i++) {
-            parent[i] = i;
-        }
-
-        for (int[] edge : edges) {
-            union(parent, edge[1], edge[2]);
+        while (left <= right) {
+            mid = (left + right) / 2;
             
-            if (find(parent, 0) == find(parent, m*n-1)) {
-                return edge[0];
+            boolean[] seen = new boolean[len * len];
+            
+            if (dfs(0, 0, grid, mid, seen)) {
+                res = mid;
+                right = mid - 1;
+            } else {
+                left = mid + 1;
             }
         }
 
-        return grid[0][0];
+        return res;
 
     }
 
-    private int find(int[] parent, int x) {
+    public boolean dfs(int xn, int yn, int[][] grid, int mid, boolean[] seen) {
 
-        if (parent[x] != x) {
-            parent[x] = find(parent, parent[x]);
+        int idx = xn * len + yn;
+        
+        if (seen[idx]) {
+            return true;
         }
 
-        return parent[x];
+        seen[idx] = true;
+        
+        for (int i = 0; i < 4; i++) {
+            int newx = xn + dirs[i][0];
+            int newy = yn + dirs[i][1];
 
+            if (newx >= 0 && newx < len && newy >= 0 && newy < len && !seen[newx * len + newy] && grid[newx][newy] <= mid) {
+                if (newx == len - 1 && newy == len - 1) {
+                    return true;
+                }
+                
+                if (dfs(newx, newy, grid, mid, seen)) {
+                    return true;
+                }
+            }
+
+        }
+
+        return false;
     }
-
-    private void union(int[] parent, int x, int y) {
-
-        parent[find(parent, x)] = find(parent, y);
-    }
-
 }
