@@ -1,33 +1,52 @@
 class Solution {
-
+    
     public int[] avoidFlood(int[] rains) {
-        int[] ans = new int[rains.length];
-        Arrays.fill(ans, 1);
+        int n = rains.length;
+        int[] fa = new int[n + 1];
 
-        TreeSet<Integer> st = new TreeSet<Integer>();
-        Map<Integer, Integer> mp = new HashMap<Integer, Integer>();
+        for (int i = 0; i <= n; i++) {
+            fa[i] = i;
+        }
 
-        for (int i = 0; i < rains.length; ++i) {
-            if (rains[i] == 0) {
-                st.add(i);
-            } else {
-                ans[i] = -1;
+        int[] ans = new int[n];
+        Map<Integer, Integer> fullDay = new HashMap<>();
+        
+        for (int i = 0; i < n; i++) {
+            int lake = rains[i];
+            
+            if (lake == 0) {
+                ans[i] = 1;
+                
+                continue;
+            }
 
-                if (mp.containsKey(rains[i])) {
-                    Integer it = st.ceiling(mp.get(rains[i]));
+            Integer j = fullDay.get(lake);
+            
+            if (j != null) {
+                int dryDay = find(j + 1, fa);
 
-                    if (it == null) {
-                        return new int[0];
-                    }
-
-                    ans[it] = rains[i];
-                    st.remove(it);
+                if (dryDay >= i) {
+                    return new int[]{};
                 }
 
-                mp.put(rains[i], i);
+                ans[dryDay] = lake;
+                fa[dryDay] = find(dryDay + 1, fa);
             }
+
+            ans[i] = -1;
+            fa[i] = i + 1;
+            fullDay.put(lake, i);
         }
 
         return ans;
+
+    }
+    
+    private int find(int x, int[] fa) {
+        if (fa[x] != x) {
+            fa[x] = find(fa[x], fa);
+        }
+
+        return fa[x];
     }
 }
