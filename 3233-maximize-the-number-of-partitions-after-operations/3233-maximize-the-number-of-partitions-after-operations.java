@@ -1,75 +1,60 @@
-public class Solution {
+class Solution {
 
-    public int maxPartitionsAfterOperations(String s, int k) {
-
-        int n = s.length();
-        int[][] left = new int[n][3];
-        int[][] right = new int[n][3];
-
-        int num = 0;
-        int mask = 0;
-        int count = 0;
-
-        for (int i = 0; i < n - 1; i++) {
-            int binary = 1 << (s.charAt(i) - 'a');
-
-            if ((mask & binary) == 0) {
-                count++;
-
-                if (count <= k) {
-                    mask |= binary;
-                } else {
-                    num++;
-                    mask = binary;
-                    count = 1;
-                }
-            }
-
-            left[i + 1][0] = num;
-            left[i + 1][1] = mask;
-            left[i + 1][2] = count;
+    public int maxPartitionsAfterOperations(String S, int k) {
+        if (k == 26) {
+            return 1;
         }
 
-        num = 0;
-        mask = 0;
-        count = 0;
+        char[] s = S.toCharArray();
+        int n = s.length;
+        int[] left1 = new int[n];
+        int[] left2 = new int[n];
+        int[] partitions = new int[n];
 
-        for (int i = n - 1; i > 0; i--) {
-            int binary = 1 << (s.charAt(i) - 'a');
-
-            if ((mask & binary) == 0) {
-                count++;
-
-                if (count <= k) {
-                    mask |= binary;
-                } else {
-                    num++;
-                    mask = binary;
-                    count = 1;
-                }
-            }
-
-            right[i - 1][0] = num;
-            right[i - 1][1] = mask;
-            right[i - 1][2] = count;
-        }
-
-        int maxVal = 0;
+        int mask1 = 0;
+        int mask2 = 0;
+        int count = 1;
 
         for (int i = 0; i < n; i++) {
-            int seg = left[i][0] + right[i][0] + 2;
-            int totMask = left[i][1] | right[i][1];
-            int totCount = Integer.bitCount(totMask);
+            int filter = 1 << (s[i] - 'a');
+            mask2 |= mask1 & filter;
+            mask1 |= filter;
 
-            if (left[i][2] == k && right[i][2] == k && totCount < 26) {
-                seg++;
-            } else if (Math.min(totCount + 1, 26) <= k) {
-                seg--;
+            if (Integer.bitCount(mask1) > k) {
+                mask1 = filter;
+                mask2 = 0;
+                count++;
             }
 
-            maxVal = Math.max(maxVal, seg);
+            left1[i] = mask1;
+            left2[i] = mask2;
+            partitions[i] = count;
         }
 
-        return maxVal;
+        int ans = count;
+        mask1 = mask2 = count = 0;
+
+        for (int i = n - 1; i >= 0; i--) {
+            int filter = 1 << (s[i] - 'a');
+            mask2 |= mask1 & filter;
+            mask1 |= filter;
+
+            if (Integer.bitCount(mask1) > k) {
+                mask1 = filter;
+                mask2 = 0;
+                count++;
+            }
+
+            if (Integer.bitCount(mask1) == k) {
+                if ((filter & mask2) != 0 && (filter & left2[i]) != 0 && Integer.bitCount(left1[i]) == k
+                        && (left1[i] | mask1) != (1 << 26) - 1) {
+                    ans = Math.max(ans, count + partitions[i] + 2);
+                } else if (mask2 != 0) {
+                    ans = Math.max(ans, count + partitions[i] + 1);
+                }
+            }
+        }
+
+        return ans;
     }
 }
