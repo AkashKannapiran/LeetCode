@@ -1,74 +1,47 @@
 class Solution {
-    
+
     public int maxFrequency(int[] nums, int k, int numOperations) {
-        
-        Arrays.sort(nums);
-        int ans = 0;
-        Map<Integer, Integer> numCount = new HashMap<>();
-        int lastNumIndex = 0;
-        
-        for (int i = 0; i < nums.length; ++i) {
-            if (nums[i] != nums[lastNumIndex]) {
-                numCount.put(nums[lastNumIndex], i - lastNumIndex);
-                ans = Math.max(ans, i - lastNumIndex);
-                lastNumIndex = i;
-            }
+
+        int max = 0;
+        int min = Integer.MAX_VALUE;
+
+        for (int i : nums) {
+            max = Math.max(max, i);
+            min = Math.min(min, i);
         }
 
-        numCount.put(nums[lastNumIndex], nums.length - lastNumIndex);
-        ans = Math.max(ans, nums.length - lastNumIndex);
-        
-        for (int i = nums[0]; i <= nums[nums.length - 1]; i++) {
-            int l = leftBound(nums, i - k);
-            int r = rightBound(nums, i + k);
-            int tempAns;
-            
-            if (numCount.containsKey(i)) {
-                tempAns = Math.min(r - l + 1, numCount.get(i) + numOperations);
-            } else {
-                tempAns = Math.min(r - l + 1, numOperations);
+        int[] freq = new int[max + 1];
+        int[] prefix = new int[max + 1];
+
+        for (int i : nums) {
+            freq[i]++;
+        }
+
+        for (int i = min; i <= max; i++) {
+            prefix[i] = prefix[i - 1] + freq[i];
+        }
+
+        int ans = 0;
+
+        for (int i = min; i <= max; i++) {
+            int low = 0;
+
+            if (i - k - 1 > 0) {
+                low = prefix[i - k - 1];
             }
-            
-            ans = Math.max(ans, tempAns);
+
+            int high = 0;
+
+            if (i + k <= max) {
+                high = prefix[i + k];
+            } else {
+                high = prefix[max];
+            }
+
+            int toChange = high - low - freq[i];
+            ans = Math.max(ans, freq[i] + (toChange >= numOperations ? numOperations : toChange));
         }
 
         return ans;
-    }
-
-    private int leftBound(int[] nums, int value) {
-
-        int left = 0;
-        int right = nums.length - 1;
-        
-        while (left < right) {
-            int mid = (left + right) / 2;
-            
-            if (nums[mid] < value) {
-                left = mid + 1;
-            } else {
-                right = mid;
-            }
-
-        }
-
-        return left;
-    }
-    
-    private int rightBound(int[] nums, int value) {
-        int left = 0;
-        int right = nums.length - 1;
-        
-        while (left < right) {
-            int mid = (left + right + 1) / 2;
-            
-            if (nums[mid] > value) {
-                right = mid - 1;
-            } else {
-                left = mid;
-            }
-
-        }
-        
-        return left;
     }
 }
