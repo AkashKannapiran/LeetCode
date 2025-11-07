@@ -1,59 +1,74 @@
 class Solution {
-    
-    public long maxPower(int[] stations, int r, int k) {
+
+    public long maxPower(int[] stations, int r, long k) {
 
         int n = stations.length;
-        long[] cnt = new long[n + 1];
+        long[] power = new long[n];
+        long window = 0;
+        int windowSize = 2 * r + 1;
 
-        for (int i = 0; i < n; i++) {
-            int left = Math.max(0, i - r);
-            int right = Math.min(n, i + r + 1);
-            cnt[left] += stations[i];
-            cnt[right] -= stations[i];
+        for (int j = 0; j <= Math.min(n - 1, r); j++) {
+            window += stations[j];
         }
 
-        long lo = Arrays.stream(stations).min().getAsInt();
-        long hi = Arrays.stream(stations).asLongStream().sum() + k;
-        long res = 0;
+        for (int i = 0; i < n; i++) {
+            power[i] = window;
+            int removeIdx = i - r;
 
-        while (lo <= hi) {
-            long mid = lo + (hi - lo) / 2;
-            
-            if (check(cnt, mid, r, k)) {
-                res = mid;
-                lo = mid + 1;
-            } else {
-                hi = mid - 1;
+            if (removeIdx >= 0) {
+                window -= stations[removeIdx];
+            }
+
+            int addIdx = i + r + 1;
+
+            if (addIdx < n) {
+                window += stations[addIdx];
             }
         }
 
-        return res;
+        long low = 0;
+        long high = Arrays.stream(power).max().orElse(0L) + k;
+        long best = 0;
+
+        while (low <= high) {
+            long mid = low + (high - low) / 2;
+
+            if (canReach(power, r, k, mid)) {
+                best = mid;
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+
+        return best;
     }
-    
-    private boolean check(long[] cnt, long val, int r, int k) {
-        
-        int n = cnt.length - 1;
-        long[] diff = cnt.clone();
-        long sum = 0;
-        long remaining = k;
-        
+
+    private boolean canReach(long[] power, int r, long k, long target) {
+
+        int n = power.length;
+        long used = 0L;
+        long[] diff = new long[n + 1];
+        long curAdd = 0L;
+
         for (int i = 0; i < n; i++) {
-            sum += diff[i];
-            
-            if (sum < val) {
-                long add = val - sum;
-                
-                if (remaining < add) {
+            curAdd += diff[i];
+            long total = power[i] + curAdd;
+
+            if (total < target) {
+                long need = target - total;
+                used += need;
+
+                if (used > k) {
                     return false;
                 }
-                
-                remaining -= add;
+
+                curAdd += need;
                 int end = Math.min(n, i + 2 * r + 1);
-                diff[end] -= add;
-                sum += add;
+                diff[end] -= need;
             }
         }
-        
+
         return true;
     }
 }
