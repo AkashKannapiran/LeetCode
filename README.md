@@ -65,6 +65,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1505-create-target-array-in-the-given-order](https://github.com/AkashKannapiran/LeetCode/tree/master/1505-create-target-array-in-the-given-order) |
 | [1510-find-lucky-integer-in-an-array](https://github.com/AkashKannapiran/LeetCode/tree/master/1510-find-lucky-integer-in-an-array) |
 | [1528-kids-with-the-greatest-number-of-candies](https://github.com/AkashKannapiran/LeetCode/tree/master/1528-kids-with-the-greatest-number-of-candies) |
+| [1548-check-if-all-1s-are-at-least-length-k-places-away](https://github.com/AkashKannapiran/LeetCode/tree/master/1548-check-if-all-1s-are-at-least-length-k-places-away) |
 | [1580-shuffle-the-array](https://github.com/AkashKannapiran/LeetCode/tree/master/1580-shuffle-the-array) |
 | [1586-longest-subarray-of-1s-after-deleting-one-element](https://github.com/AkashKannapiran/LeetCode/tree/master/1586-longest-subarray-of-1s-after-deleting-one-element) |
 | [1603-running-sum-of-1d-array](https://github.com/AkashKannapiran/LeetCode/tree/master/1603-running-sum-of-1d-array) |
