@@ -48,6 +48,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0948-sort-an-array](https://github.com/AkashKannapiran/LeetCode/tree/master/0948-sort-an-array) |
 | [1006-vowel-spellchecker](https://github.com/AkashKannapiran/LeetCode/tree/master/1006-vowel-spellchecker) |
 | [1018-largest-perimeter-triangle](https://github.com/AkashKannapiran/LeetCode/tree/master/1018-largest-perimeter-triangle) |
+| [1018-binary-prefix-divisible-by-5](https://github.com/AkashKannapiran/LeetCode/tree/master/1018-binary-prefix-divisible-by-5) |
 | [1031-add-to-array-form-of-integer](https://github.com/AkashKannapiran/LeetCode/tree/master/1031-add-to-array-form-of-integer) |
 | [1049-minimum-domino-rotations-for-equal-row](https://github.com/AkashKannapiran/LeetCode/tree/master/1049-minimum-domino-rotations-for-equal-row) |
 | [1111-minimum-score-triangulation-of-polygon](https://github.com/AkashKannapiran/LeetCode/tree/master/1111-minimum-score-triangulation-of-polygon) |
@@ -494,6 +495,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0389-find-the-difference](https://github.com/AkashKannapiran/LeetCode/tree/master/0389-find-the-difference) |
 | [0861-flipping-an-image](https://github.com/AkashKannapiran/LeetCode/tree/master/0861-flipping-an-image) |
 | [0934-bitwise-ors-of-subarrays](https://github.com/AkashKannapiran/LeetCode/tree/master/0934-bitwise-ors-of-subarrays) |
+| [1018-binary-prefix-divisible-by-5](https://github.com/AkashKannapiran/LeetCode/tree/master/1018-binary-prefix-divisible-by-5) |
 | [1732-minimum-one-bit-operations-to-make-integers-zero](https://github.com/AkashKannapiran/LeetCode/tree/master/1732-minimum-one-bit-operations-to-make-integers-zero) |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/AkashKannapiran/LeetCode/tree/master/1993-sum-of-all-subset-xor-totals) |
 | [2170-count-number-of-maximum-bitwise-or-subsets](https://github.com/AkashKannapiran/LeetCode/tree/master/2170-count-number-of-maximum-bitwise-or-subsets) |
