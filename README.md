@@ -39,6 +39,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0822-unique-morse-code-words](https://github.com/AkashKannapiran/LeetCode/tree/master/0822-unique-morse-code-words) |
 | [0824-number-of-lines-to-write-string](https://github.com/AkashKannapiran/LeetCode/tree/master/0824-number-of-lines-to-write-string) |
 | [0830-largest-triangle-area](https://github.com/AkashKannapiran/LeetCode/tree/master/0830-largest-triangle-area) |
+| [0840-magic-squares-in-grid](https://github.com/AkashKannapiran/LeetCode/tree/master/0840-magic-squares-in-grid) |
 | [0861-flipping-an-image](https://github.com/AkashKannapiran/LeetCode/tree/master/0861-flipping-an-image) |
 | [0898-transpose-matrix](https://github.com/AkashKannapiran/LeetCode/tree/master/0898-transpose-matrix) |
 | [0932-monotonic-array](https://github.com/AkashKannapiran/LeetCode/tree/master/0932-monotonic-array) |
@@ -398,6 +399,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0768-partition-labels](https://github.com/AkashKannapiran/LeetCode/tree/master/0768-partition-labels) |
 | [0797-rabbits-in-forest](https://github.com/AkashKannapiran/LeetCode/tree/master/0797-rabbits-in-forest) |
 | [0822-unique-morse-code-words](https://github.com/AkashKannapiran/LeetCode/tree/master/0822-unique-morse-code-words) |
+| [0840-magic-squares-in-grid](https://github.com/AkashKannapiran/LeetCode/tree/master/0840-magic-squares-in-grid) |
 | [0896-smallest-subtree-with-all-the-deepest-nodes](https://github.com/AkashKannapiran/LeetCode/tree/master/0896-smallest-subtree-with-all-the-deepest-nodes) |
 | [0900-reordered-power-of-2](https://github.com/AkashKannapiran/LeetCode/tree/master/0900-reordered-power-of-2) |
 | [0940-fruit-into-baskets](https://github.com/AkashKannapiran/LeetCode/tree/master/0940-fruit-into-baskets) |
@@ -587,6 +589,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0797-rabbits-in-forest](https://github.com/AkashKannapiran/LeetCode/tree/master/0797-rabbits-in-forest) |
 | [0826-soup-servings](https://github.com/AkashKannapiran/LeetCode/tree/master/0826-soup-servings) |
 | [0830-largest-triangle-area](https://github.com/AkashKannapiran/LeetCode/tree/master/0830-largest-triangle-area) |
+| [0840-magic-squares-in-grid](https://github.com/AkashKannapiran/LeetCode/tree/master/0840-magic-squares-in-grid) |
 | [0867-new-21-game](https://github.com/AkashKannapiran/LeetCode/tree/master/0867-new-21-game) |
 | [0900-reordered-power-of-2](https://github.com/AkashKannapiran/LeetCode/tree/master/0900-reordered-power-of-2) |
 | [1015-smallest-integer-divisible-by-k](https://github.com/AkashKannapiran/LeetCode/tree/master/1015-smallest-integer-divisible-by-k) |
@@ -766,6 +769,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0417-pacific-atlantic-water-flow](https://github.com/AkashKannapiran/LeetCode/tree/master/0417-pacific-atlantic-water-flow) |
 | [0498-diagonal-traverse](https://github.com/AkashKannapiran/LeetCode/tree/master/0498-diagonal-traverse) |
 | [0794-swim-in-rising-water](https://github.com/AkashKannapiran/LeetCode/tree/master/0794-swim-in-rising-water) |
+| [0840-magic-squares-in-grid](https://github.com/AkashKannapiran/LeetCode/tree/master/0840-magic-squares-in-grid) |
 | [0861-flipping-an-image](https://github.com/AkashKannapiran/LeetCode/tree/master/0861-flipping-an-image) |
 | [0898-transpose-matrix](https://github.com/AkashKannapiran/LeetCode/tree/master/0898-transpose-matrix) |
 | [0945-snakes-and-ladders](https://github.com/AkashKannapiran/LeetCode/tree/master/0945-snakes-and-ladders) |
