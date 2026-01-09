@@ -404,6 +404,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0797-rabbits-in-forest](https://github.com/AkashKannapiran/LeetCode/tree/master/0797-rabbits-in-forest) |
 | [0822-unique-morse-code-words](https://github.com/AkashKannapiran/LeetCode/tree/master/0822-unique-morse-code-words) |
 | [0840-magic-squares-in-grid](https://github.com/AkashKannapiran/LeetCode/tree/master/0840-magic-squares-in-grid) |
+| [0865-smallest-subtree-with-all-the-deepest-nodes](https://github.com/AkashKannapiran/LeetCode/tree/master/0865-smallest-subtree-with-all-the-deepest-nodes) |
 | [0896-smallest-subtree-with-all-the-deepest-nodes](https://github.com/AkashKannapiran/LeetCode/tree/master/0896-smallest-subtree-with-all-the-deepest-nodes) |
 | [0900-reordered-power-of-2](https://github.com/AkashKannapiran/LeetCode/tree/master/0900-reordered-power-of-2) |
 | [0940-fruit-into-baskets](https://github.com/AkashKannapiran/LeetCode/tree/master/0940-fruit-into-baskets) |
@@ -889,6 +890,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0407-trapping-rain-water-ii](https://github.com/AkashKannapiran/LeetCode/tree/master/0407-trapping-rain-water-ii) |
 | [0417-pacific-atlantic-water-flow](https://github.com/AkashKannapiran/LeetCode/tree/master/0417-pacific-atlantic-water-flow) |
 | [0794-swim-in-rising-water](https://github.com/AkashKannapiran/LeetCode/tree/master/0794-swim-in-rising-water) |
+| [0865-smallest-subtree-with-all-the-deepest-nodes](https://github.com/AkashKannapiran/LeetCode/tree/master/0865-smallest-subtree-with-all-the-deepest-nodes) |
 | [0896-smallest-subtree-with-all-the-deepest-nodes](https://github.com/AkashKannapiran/LeetCode/tree/master/0896-smallest-subtree-with-all-the-deepest-nodes) |
 | [0945-snakes-and-ladders](https://github.com/AkashKannapiran/LeetCode/tree/master/0945-snakes-and-ladders) |
 | [1161-maximum-level-sum-of-a-binary-tree](https://github.com/AkashKannapiran/LeetCode/tree/master/1161-maximum-level-sum-of-a-binary-tree) |
@@ -981,6 +983,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/AkashKannapiran/LeetCode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
+| [0865-smallest-subtree-with-all-the-deepest-nodes](https://github.com/AkashKannapiran/LeetCode/tree/master/0865-smallest-subtree-with-all-the-deepest-nodes) |
 | [0896-smallest-subtree-with-all-the-deepest-nodes](https://github.com/AkashKannapiran/LeetCode/tree/master/0896-smallest-subtree-with-all-the-deepest-nodes) |
 | [1161-maximum-level-sum-of-a-binary-tree](https://github.com/AkashKannapiran/LeetCode/tree/master/1161-maximum-level-sum-of-a-binary-tree) |
 | [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/AkashKannapiran/LeetCode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
@@ -998,6 +1001,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0386-lexicographical-numbers](https://github.com/AkashKannapiran/LeetCode/tree/master/0386-lexicographical-numbers) |
 | [0417-pacific-atlantic-water-flow](https://github.com/AkashKannapiran/LeetCode/tree/master/0417-pacific-atlantic-water-flow) |
 | [0794-swim-in-rising-water](https://github.com/AkashKannapiran/LeetCode/tree/master/0794-swim-in-rising-water) |
+| [0865-smallest-subtree-with-all-the-deepest-nodes](https://github.com/AkashKannapiran/LeetCode/tree/master/0865-smallest-subtree-with-all-the-deepest-nodes) |
 | [0896-smallest-subtree-with-all-the-deepest-nodes](https://github.com/AkashKannapiran/LeetCode/tree/master/0896-smallest-subtree-with-all-the-deepest-nodes) |
 | [1161-maximum-level-sum-of-a-binary-tree](https://github.com/AkashKannapiran/LeetCode/tree/master/1161-maximum-level-sum-of-a-binary-tree) |
 | [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/AkashKannapiran/LeetCode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
@@ -1018,6 +1022,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/AkashKannapiran/LeetCode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
+| [0865-smallest-subtree-with-all-the-deepest-nodes](https://github.com/AkashKannapiran/LeetCode/tree/master/0865-smallest-subtree-with-all-the-deepest-nodes) |
 | [0896-smallest-subtree-with-all-the-deepest-nodes](https://github.com/AkashKannapiran/LeetCode/tree/master/0896-smallest-subtree-with-all-the-deepest-nodes) |
 | [1161-maximum-level-sum-of-a-binary-tree](https://github.com/AkashKannapiran/LeetCode/tree/master/1161-maximum-level-sum-of-a-binary-tree) |
 | [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/AkashKannapiran/LeetCode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
