@@ -1,58 +1,54 @@
 class Solution {
-
     public int minCost(int[][] grid, int k) {
         int m = grid.length;
         int n = grid[0].length;
-        List<int[]> points = new ArrayList<>();
+        
+        if (k > 0 && grid[0][0] >= grid[m - 1][n - 1]) {
+            return 0;
+        }
 
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                points.add(new int[] { i, j });
+        int mx = 0;
+        
+        for (int[] row : grid) {
+            for (int x : row) {
+                mx = Math.max(mx, x);
             }
         }
-        
-        points.sort(Comparator.comparingInt(p -> grid[p[0]][p[1]]));
-        int[][] costs = new int[m][n];
-        
-        for (int[] row : costs) {
-            Arrays.fill(row, Integer.MAX_VALUE);
-        }
-        
+
+        int[] sufMinF = new int[mx + 2];
+        Arrays.fill(sufMinF, Integer.MAX_VALUE);
+        int[] minF = new int[mx + 1];
+        int[] f = new int[n + 1];
+
         for (int t = 0; t <= k; t++) {
-            int minCost = Integer.MAX_VALUE;
+            Arrays.fill(minF, Integer.MAX_VALUE);
+            Arrays.fill(f, Integer.MAX_VALUE / 2);
+            f[1] = -grid[0][0];
             
-            for (int i = 0, j = 0; i < points.size(); i++) {
-                minCost = Math.min(minCost, costs[points.get(i)[0]][points.get(i)[1]]);
-
-                if (i + 1 < points.size() && grid[points.get(i)[0]][points.get(i)[1]] == grid[points.get(i + 1)[0]][points.get(i + 1)[1]]) {
-                    continue;
+            for (int[] row : grid) {
+                for (int j = 0; j < n; j++) {
+                    int x = row[j];
+                    f[j + 1] = Math.min(Math.min(f[j], f[j + 1]) + x, sufMinF[x]);
+                    minF[x] = Math.min(minF[x], f[j + 1]);
                 }
-
-                for (int r = j; r <= i; r++) {
-                    costs[points.get(r)[0]][points.get(r)[1]] = minCost;
-                }
-                
-                j = i + 1;
             }
 
-            for (int i = m - 1; i >= 0; i--) {
-                for (int j = n - 1; j >= 0; j--) {
-                    if (i == m - 1 && j == n - 1) {
-                        costs[i][j] = 0;
-                        continue;
-                    }
-
-                    if (i != m - 1) {
-                        costs[i][j] = Math.min(costs[i][j], costs[i + 1][j] + grid[i + 1][j]);
-                    }
-
-                    if (j != n - 1) {
-                        costs[i][j] = Math.min(costs[i][j], costs[i][j + 1] + grid[i][j + 1]);
-                    }
+            boolean done = true;
+            
+            for (int i = mx; i >= 0; i--) {
+                int mn = Math.min(sufMinF[i + 1], minF[i]);
+                
+                if (mn < sufMinF[i]) {
+                    sufMinF[i] = mn;
+                    done = false;
                 }
+            }
+
+            if (done) {
+                break;
             }
         }
         
-        return costs[0][0];
+        return f[n];
     }
 }
