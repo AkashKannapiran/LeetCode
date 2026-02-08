@@ -1045,6 +1045,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Tree
 |  |
 | ------- |
+| [0110-balanced-binary-tree](https://github.com/AkashKannapiran/LeetCode/tree/master/0110-balanced-binary-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/AkashKannapiran/LeetCode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0865-smallest-subtree-with-all-the-deepest-nodes](https://github.com/AkashKannapiran/LeetCode/tree/master/0865-smallest-subtree-with-all-the-deepest-nodes) |
 | [0896-smallest-subtree-with-all-the-deepest-nodes](https://github.com/AkashKannapiran/LeetCode/tree/master/0896-smallest-subtree-with-all-the-deepest-nodes) |
@@ -1060,6 +1061,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Depth-First Search
 |  |
 | ------- |
+| [0110-balanced-binary-tree](https://github.com/AkashKannapiran/LeetCode/tree/master/0110-balanced-binary-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/AkashKannapiran/LeetCode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0386-lexicographical-numbers](https://github.com/AkashKannapiran/LeetCode/tree/master/0386-lexicographical-numbers) |
 | [0417-pacific-atlantic-water-flow](https://github.com/AkashKannapiran/LeetCode/tree/master/0417-pacific-atlantic-water-flow) |
@@ -1084,6 +1086,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Binary Tree
 |  |
 | ------- |
+| [0110-balanced-binary-tree](https://github.com/AkashKannapiran/LeetCode/tree/master/0110-balanced-binary-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/AkashKannapiran/LeetCode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0865-smallest-subtree-with-all-the-deepest-nodes](https://github.com/AkashKannapiran/LeetCode/tree/master/0865-smallest-subtree-with-all-the-deepest-nodes) |
 | [0896-smallest-subtree-with-all-the-deepest-nodes](https://github.com/AkashKannapiran/LeetCode/tree/master/0896-smallest-subtree-with-all-the-deepest-nodes) |
