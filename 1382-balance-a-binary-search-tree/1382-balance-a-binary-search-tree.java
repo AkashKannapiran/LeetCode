@@ -1,80 +1,49 @@
 /**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
+* Definition for a binary tree node.
+* public class TreeNode {
+*     int val;
+*     TreeNode left;
+*     TreeNode right;
+*     TreeNode() {}
+*     TreeNode(int val) { this.val = val; }
+*     TreeNode(int val, TreeNode left, TreeNode right) {
+*         this.val = val;
+*         this.left = left;
+*         this.right = right;
+*     }
+* }
+*/
+
 class Solution {
+    ArrayList<TreeNode> res = new ArrayList<TreeNode>();
 
     public TreeNode balanceBST(TreeNode root) {
+        inorder(root);
+
+        return Build_BST(0, res.size() - 1);
+    }
+
+    public void inorder(TreeNode root) {
         if (root == null) {
+            return;
+        }
+
+        inorder(root.left);
+        res.add(root);
+        inorder(root.right);
+    }
+
+    public TreeNode Build_BST(int start, int end) {
+        if (start > end) {
             return null;
         }
 
-        TreeNode vineHead = new TreeNode(0);
-        vineHead.right = root;
-        TreeNode current = vineHead;
+        int mid = (start + end) / 2;
+        TreeNode node = res.get(mid);
 
-        while (current.right != null) {
-            if (current.right.left != null) {
-                rightRotate(current, current.right);
-            } else {
-                current = current.right;
-            }
-        }
+        node.left = Build_BST(start, mid - 1);
+        node.right = Build_BST(mid + 1, end);
 
-        int nodeCount = 0;
-        current = vineHead.right;
-
-        while (current != null) {
-            ++nodeCount;
-            current = current.right;
-        }
-
-        int m = (int) Math.pow(
-                2,
-                Math.floor(Math.log(nodeCount + 1) / Math.log(2))) -
-                1;
-        makeRotations(vineHead, nodeCount - m);
-
-        while (m > 1) {
-            m /= 2;
-            makeRotations(vineHead, m);
-        }
-
-        TreeNode balancedRoot = vineHead.right;
-        return balancedRoot;
-    }
-
-    private void rightRotate(TreeNode parent, TreeNode node) {
-        TreeNode tmp = node.left;
-        node.left = tmp.right;
-        tmp.right = node;
-        parent.right = tmp;
-    }
-
-    private void leftRotate(TreeNode parent, TreeNode node) {
-        TreeNode tmp = node.right;
-        node.right = tmp.left;
-        tmp.left = node;
-        parent.right = tmp;
-    }
-
-    private void makeRotations(TreeNode vineHead, int count) {
-        TreeNode current = vineHead;
-        for (int i = 0; i < count; ++i) {
-            TreeNode tmp = current.right;
-            leftRotate(current, tmp);
-            current = current.right;
-        }
+        return node;
     }
 }
