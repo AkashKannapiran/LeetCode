@@ -1,95 +1,91 @@
 class Solution {
-
-    int fn1(String s, char x, char y) {
-        int n = s.length();
-        int res = 0;
-
-        for (int i = 0; i < n;) {
-            while (i < n && s.charAt(i) != x && s.charAt(i) != y)
-                i++;
-
-            int j = i, p = 0;
-            HashMap<Integer, Integer> mp = new HashMap<>();
-            mp.put(0, i - 1);
-
-            while (j < n && (s.charAt(j) == x || s.charAt(j) == y)) {
-                p += (s.charAt(j) == x ? 1 : -1);
-
-                if (mp.containsKey(p)) {
-                    res = Math.max(res, j - mp.get(p));
-                } else {
-                    mp.put(p, j);
-                }
-
-                j++;
-            }
-
-            i = j;
+    public int longestBalanced(String s) {
+        int a = 0;
+        char[] c = s.toCharArray();
+        for (char x = 'a'; x <= 'c'; x++) {
+            a = Math.max(a, get1(c, x));
         }
 
-        return res;
+        a = Math.max(Math.max(a, get2(c, 'a', 'b', a)),
+                Math.max(get2(c, 'a', 'c', a), get2(c, 'b', 'c', a)));
+
+        a = Math.max(a, get3(c, a));
+        return a;
     }
 
-    int fn2(String s) {
-        int n = s.length(), res = 0;
+    private int get3(char[] c, int max) {
+        int a = max, t, pow = 1_000_000;
+        long v = 1_000_001_000_000L;
+        Map<Long, Integer> map = new HashMap<>();
+        map.put(v, -1);
 
-        for (int i = 0; i < n;) {
-            int j = i, ca = 0, cb = 0, cc = 0;
-
-            HashMap<String, Integer> mp = new HashMap<>();
-            mp.put("0#0", i - 1);
-
-            while (j < n) {
-                char ch = s.charAt(j);
-
-                if (ch == 'a')
-                    ca++;
-                else if (ch == 'b')
-                    cb++;
-                else if (ch == 'c')
-                    cc++;
-                else
-                    break;
-
-                int d1 = ca - cb;
-                int d2 = ca - cc;
-                String key = d1 + "#" + d2;
-
-                if (mp.containsKey(key)) {
-                    res = Math.max(res, j - mp.get(key));
-                } else {
-                    mp.put(key, j);
-                }
-                
-                j++;
-            }
-
-            i = j;
-        }
-
-        return res;
-    }
-
-    int fn3(String s, char x) {
-        int n = s.length(), res = 0, curr = 0;
-
-        for (int i = 0; i < n; i++) {
-            if (s.charAt(i) == x)
-                curr++;
+        for (int i = 0; i < c.length; i++) {
+            if (c[i] == 'a')
+                v += pow + 1;
+            else if (c[i] == 'b')
+                v -= pow;
             else
-                curr = 0;
+                v--;
 
-            res = Math.max(res, curr);
+            if (map.containsKey(v)) {
+                t = i - map.get(v);
+                if (a < t)
+                    a = t;
+            } else
+                map.put(v, i);
         }
         
-        return res;
+        return a;
     }
 
-    public int longestBalanced(String s) {
-        return Math.max(
-                Math.max(
-                        Math.max(fn1(s, 'a', 'b'), fn1(s, 'b', 'c')),
-                        Math.max(fn1(s, 'a', 'c'), fn2(s))),
-                Math.max(fn3(s, 'a'), Math.max(fn3(s, 'b'), fn3(s, 'c'))));
+    private int get2(char[] c, char x, char y, int max) {
+        int clear = -1;
+        int a = 0, v = c.length, t;
+        int[] map = new int[(c.length << 1) + 1];
+        Arrays.fill(map, -2);
+        map[v] = -1;
+
+        for (int i = 0; i < c.length; i++) {
+            if (c[i] != x && c[i] != y) {
+                clear = i;
+                v = c.length;
+                map[v] = clear;
+            } else {
+                if (c[i] == x)
+                    v++;
+                else
+                    v--;
+
+                if (map[v] < clear)
+                    map[v] = i;
+                else if (v == c.length) {
+                    t = i - clear;
+                    if (a < t)
+                        a = t;
+                } else {
+                    t = i - map[v];
+                    if (a < t)
+                        a = t;
+                }
+            }
+        }
+        
+        return a;
+    }
+
+    private int get1(char[] c, char x) {
+        int a = 0, b = 0;
+        
+        for (char y : c) {
+            if (x == y)
+                b++;
+            else if (b > 0) {
+                if (a < b)
+                    a = b;
+                b = 0;
+            }
+        }
+        
+        return Math.max(a, b);
     }
 }
