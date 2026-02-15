@@ -522,6 +522,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0038-count-and-say](https://github.com/AkashKannapiran/LeetCode/tree/master/0038-count-and-say) |
 | [0058-length-of-last-word](https://github.com/AkashKannapiran/LeetCode/tree/master/0058-length-of-last-word) |
 | [0065-valid-number](https://github.com/AkashKannapiran/LeetCode/tree/master/0065-valid-number) |
+| [0067-add-binary](https://github.com/AkashKannapiran/LeetCode/tree/master/0067-add-binary) |
 | [0165-compare-version-numbers](https://github.com/AkashKannapiran/LeetCode/tree/master/0165-compare-version-numbers) |
 | [0166-fraction-to-recurring-decimal](https://github.com/AkashKannapiran/LeetCode/tree/master/0166-fraction-to-recurring-decimal) |
 | [0242-valid-anagram](https://github.com/AkashKannapiran/LeetCode/tree/master/0242-valid-anagram) |
@@ -598,6 +599,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Bit Manipulation
 |  |
 | ------- |
+| [0067-add-binary](https://github.com/AkashKannapiran/LeetCode/tree/master/0067-add-binary) |
 | [0231-power-of-two](https://github.com/AkashKannapiran/LeetCode/tree/master/0231-power-of-two) |
 | [0268-missing-number](https://github.com/AkashKannapiran/LeetCode/tree/master/0268-missing-number) |
 | [0342-power-of-four](https://github.com/AkashKannapiran/LeetCode/tree/master/0342-power-of-four) |
@@ -632,6 +634,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0013-roman-to-integer](https://github.com/AkashKannapiran/LeetCode/tree/master/0013-roman-to-integer) |
 | [0048-rotate-image](https://github.com/AkashKannapiran/LeetCode/tree/master/0048-rotate-image) |
 | [0066-plus-one](https://github.com/AkashKannapiran/LeetCode/tree/master/0066-plus-one) |
+| [0067-add-binary](https://github.com/AkashKannapiran/LeetCode/tree/master/0067-add-binary) |
 | [0069-sqrtx](https://github.com/AkashKannapiran/LeetCode/tree/master/0069-sqrtx) |
 | [0166-fraction-to-recurring-decimal](https://github.com/AkashKannapiran/LeetCode/tree/master/0166-fraction-to-recurring-decimal) |
 | [0231-power-of-two](https://github.com/AkashKannapiran/LeetCode/tree/master/0231-power-of-two) |
@@ -718,6 +721,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Simulation
 |  |
 | ------- |
+| [0067-add-binary](https://github.com/AkashKannapiran/LeetCode/tree/master/0067-add-binary) |
 | [0498-diagonal-traverse](https://github.com/AkashKannapiran/LeetCode/tree/master/0498-diagonal-traverse) |
 | [0861-flipping-an-image](https://github.com/AkashKannapiran/LeetCode/tree/master/0861-flipping-an-image) |
 | [0898-transpose-matrix](https://github.com/AkashKannapiran/LeetCode/tree/master/0898-transpose-matrix) |
