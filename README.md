@@ -259,6 +259,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0053-maximum-subarray](https://github.com/AkashKannapiran/LeetCode/tree/master/0053-maximum-subarray) |
 | [0169-majority-element](https://github.com/AkashKannapiran/LeetCode/tree/master/0169-majority-element) |
+| [0190-reverse-bits](https://github.com/AkashKannapiran/LeetCode/tree/master/0190-reverse-bits) |
 | [0948-sort-an-array](https://github.com/AkashKannapiran/LeetCode/tree/master/0948-sort-an-array) |
 | [1382-balance-a-binary-search-tree](https://github.com/AkashKannapiran/LeetCode/tree/master/1382-balance-a-binary-search-tree) |
 | [2280-count-good-triplets-in-an-array](https://github.com/AkashKannapiran/LeetCode/tree/master/2280-count-good-triplets-in-an-array) |
@@ -600,6 +601,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0067-add-binary](https://github.com/AkashKannapiran/LeetCode/tree/master/0067-add-binary) |
+| [0190-reverse-bits](https://github.com/AkashKannapiran/LeetCode/tree/master/0190-reverse-bits) |
 | [0231-power-of-two](https://github.com/AkashKannapiran/LeetCode/tree/master/0231-power-of-two) |
 | [0268-missing-number](https://github.com/AkashKannapiran/LeetCode/tree/master/0268-missing-number) |
 | [0342-power-of-four](https://github.com/AkashKannapiran/LeetCode/tree/master/0342-power-of-four) |
