@@ -606,6 +606,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0268-missing-number](https://github.com/AkashKannapiran/LeetCode/tree/master/0268-missing-number) |
 | [0342-power-of-four](https://github.com/AkashKannapiran/LeetCode/tree/master/0342-power-of-four) |
 | [0389-find-the-difference](https://github.com/AkashKannapiran/LeetCode/tree/master/0389-find-the-difference) |
+| [0401-binary-watch](https://github.com/AkashKannapiran/LeetCode/tree/master/0401-binary-watch) |
 | [0756-pyramid-transition-matrix](https://github.com/AkashKannapiran/LeetCode/tree/master/0756-pyramid-transition-matrix) |
 | [0861-flipping-an-image](https://github.com/AkashKannapiran/LeetCode/tree/master/0861-flipping-an-image) |
 | [0934-bitwise-ors-of-subarrays](https://github.com/AkashKannapiran/LeetCode/tree/master/0934-bitwise-ors-of-subarrays) |
@@ -1119,6 +1120,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0037-sudoku-solver](https://github.com/AkashKannapiran/LeetCode/tree/master/0037-sudoku-solver) |
+| [0401-binary-watch](https://github.com/AkashKannapiran/LeetCode/tree/master/0401-binary-watch) |
 | [0679-24-game](https://github.com/AkashKannapiran/LeetCode/tree/master/0679-24-game) |
 | [0756-pyramid-transition-matrix](https://github.com/AkashKannapiran/LeetCode/tree/master/0756-pyramid-transition-matrix) |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/AkashKannapiran/LeetCode/tree/master/1993-sum-of-all-subset-xor-totals) |
