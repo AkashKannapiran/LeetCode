@@ -1,19 +1,13 @@
-/*class Solution {
+class Solution {
     public char findTheDifference(String s, String t) {
-        return (char) (s + t).chars().reduce(0, (c, d) -> c ^ d);
-    
-    }
-}*/
+        String combined = s + t;
+        char[] combinedArray = combined.toCharArray();
+        char extra = 0;
 
-public class Solution {
-    public char findTheDifference(String s, String t) {
-        char result = t.charAt(s.length()); 
-        
-        for (int i = 0; i < s.length(); i++) {
-            result ^= s.charAt(i);
-            result ^= t.charAt(i);
+        for (char ca : combinedArray) {
+            extra ^= ca;
         }
-        
-        return result;
+
+        return extra;
     }
 }
