@@ -21,6 +21,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/AkashKannapiran/LeetCode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/AkashKannapiran/LeetCode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0135-candy](https://github.com/AkashKannapiran/LeetCode/tree/master/0135-candy) |
+| [0136-single-number](https://github.com/AkashKannapiran/LeetCode/tree/master/0136-single-number) |
 | [0169-majority-element](https://github.com/AkashKannapiran/LeetCode/tree/master/0169-majority-element) |
 | [0217-contains-duplicate](https://github.com/AkashKannapiran/LeetCode/tree/master/0217-contains-duplicate) |
 | [0221-maximal-square](https://github.com/AkashKannapiran/LeetCode/tree/master/0221-maximal-square) |
@@ -601,6 +602,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0067-add-binary](https://github.com/AkashKannapiran/LeetCode/tree/master/0067-add-binary) |
+| [0136-single-number](https://github.com/AkashKannapiran/LeetCode/tree/master/0136-single-number) |
 | [0190-reverse-bits](https://github.com/AkashKannapiran/LeetCode/tree/master/0190-reverse-bits) |
 | [0231-power-of-two](https://github.com/AkashKannapiran/LeetCode/tree/master/0231-power-of-two) |
 | [0268-missing-number](https://github.com/AkashKannapiran/LeetCode/tree/master/0268-missing-number) |
