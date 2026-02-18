@@ -609,6 +609,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0342-power-of-four](https://github.com/AkashKannapiran/LeetCode/tree/master/0342-power-of-four) |
 | [0389-find-the-difference](https://github.com/AkashKannapiran/LeetCode/tree/master/0389-find-the-difference) |
 | [0401-binary-watch](https://github.com/AkashKannapiran/LeetCode/tree/master/0401-binary-watch) |
+| [0693-binary-number-with-alternating-bits](https://github.com/AkashKannapiran/LeetCode/tree/master/0693-binary-number-with-alternating-bits) |
 | [0756-pyramid-transition-matrix](https://github.com/AkashKannapiran/LeetCode/tree/master/0756-pyramid-transition-matrix) |
 | [0861-flipping-an-image](https://github.com/AkashKannapiran/LeetCode/tree/master/0861-flipping-an-image) |
 | [0934-bitwise-ors-of-subarrays](https://github.com/AkashKannapiran/LeetCode/tree/master/0934-bitwise-ors-of-subarrays) |
