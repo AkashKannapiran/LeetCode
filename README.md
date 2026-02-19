@@ -412,6 +412,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0165-compare-version-numbers](https://github.com/AkashKannapiran/LeetCode/tree/master/0165-compare-version-numbers) |
 | [0283-move-zeroes](https://github.com/AkashKannapiran/LeetCode/tree/master/0283-move-zeroes) |
 | [0611-valid-triangle-number](https://github.com/AkashKannapiran/LeetCode/tree/master/0611-valid-triangle-number) |
+| [0696-count-binary-substrings](https://github.com/AkashKannapiran/LeetCode/tree/master/0696-count-binary-substrings) |
 | [0768-partition-labels](https://github.com/AkashKannapiran/LeetCode/tree/master/0768-partition-labels) |
 | [0861-flipping-an-image](https://github.com/AkashKannapiran/LeetCode/tree/master/0861-flipping-an-image) |
 | [0868-push-dominoes](https://github.com/AkashKannapiran/LeetCode/tree/master/0868-push-dominoes) |
@@ -537,6 +538,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0389-find-the-difference](https://github.com/AkashKannapiran/LeetCode/tree/master/0389-find-the-difference) |
 | [0459-repeated-substring-pattern](https://github.com/AkashKannapiran/LeetCode/tree/master/0459-repeated-substring-pattern) |
 | [0474-ones-and-zeroes](https://github.com/AkashKannapiran/LeetCode/tree/master/0474-ones-and-zeroes) |
+| [0696-count-binary-substrings](https://github.com/AkashKannapiran/LeetCode/tree/master/0696-count-binary-substrings) |
 | [0712-minimum-ascii-delete-sum-for-two-strings](https://github.com/AkashKannapiran/LeetCode/tree/master/0712-minimum-ascii-delete-sum-for-two-strings) |
 | [0742-to-lower-case](https://github.com/AkashKannapiran/LeetCode/tree/master/0742-to-lower-case) |
 | [0756-pyramid-transition-matrix](https://github.com/AkashKannapiran/LeetCode/tree/master/0756-pyramid-transition-matrix) |
