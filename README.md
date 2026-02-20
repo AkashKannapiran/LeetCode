@@ -264,6 +264,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0053-maximum-subarray](https://github.com/AkashKannapiran/LeetCode/tree/master/0053-maximum-subarray) |
 | [0169-majority-element](https://github.com/AkashKannapiran/LeetCode/tree/master/0169-majority-element) |
 | [0190-reverse-bits](https://github.com/AkashKannapiran/LeetCode/tree/master/0190-reverse-bits) |
+| [0761-special-binary-string](https://github.com/AkashKannapiran/LeetCode/tree/master/0761-special-binary-string) |
 | [0948-sort-an-array](https://github.com/AkashKannapiran/LeetCode/tree/master/0948-sort-an-array) |
 | [1382-balance-a-binary-search-tree](https://github.com/AkashKannapiran/LeetCode/tree/master/1382-balance-a-binary-search-tree) |
 | [2280-count-good-triplets-in-an-array](https://github.com/AkashKannapiran/LeetCode/tree/master/2280-count-good-triplets-in-an-array) |
@@ -281,6 +282,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0389-find-the-difference](https://github.com/AkashKannapiran/LeetCode/tree/master/0389-find-the-difference) |
 | [0594-longest-harmonious-subsequence](https://github.com/AkashKannapiran/LeetCode/tree/master/0594-longest-harmonious-subsequence) |
 | [0611-valid-triangle-number](https://github.com/AkashKannapiran/LeetCode/tree/master/0611-valid-triangle-number) |
+| [0761-special-binary-string](https://github.com/AkashKannapiran/LeetCode/tree/master/0761-special-binary-string) |
 | [0900-reordered-power-of-2](https://github.com/AkashKannapiran/LeetCode/tree/master/0900-reordered-power-of-2) |
 | [0948-sort-an-array](https://github.com/AkashKannapiran/LeetCode/tree/master/0948-sort-an-array) |
 | [1018-largest-perimeter-triangle](https://github.com/AkashKannapiran/LeetCode/tree/master/1018-largest-perimeter-triangle) |
@@ -543,6 +545,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0712-minimum-ascii-delete-sum-for-two-strings](https://github.com/AkashKannapiran/LeetCode/tree/master/0712-minimum-ascii-delete-sum-for-two-strings) |
 | [0742-to-lower-case](https://github.com/AkashKannapiran/LeetCode/tree/master/0742-to-lower-case) |
 | [0756-pyramid-transition-matrix](https://github.com/AkashKannapiran/LeetCode/tree/master/0756-pyramid-transition-matrix) |
+| [0761-special-binary-string](https://github.com/AkashKannapiran/LeetCode/tree/master/0761-special-binary-string) |
 | [0768-partition-labels](https://github.com/AkashKannapiran/LeetCode/tree/master/0768-partition-labels) |
 | [0822-unique-morse-code-words](https://github.com/AkashKannapiran/LeetCode/tree/master/0822-unique-morse-code-words) |
 | [0824-number-of-lines-to-write-string](https://github.com/AkashKannapiran/LeetCode/tree/master/0824-number-of-lines-to-write-string) |
