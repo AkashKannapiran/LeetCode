@@ -1,31 +1,60 @@
 class Solution {
     public int[] sortByBits(int[] arr) {
-        Integer[] nums = Arrays.stream(arr).boxed().toArray(Integer[]::new);
-        Comparator<Integer> comparator = new CustomComparator();
-        Arrays.sort(nums, comparator);
-        
-        return Arrays.stream(nums).mapToInt(Integer::intValue).toArray();
-    }
-}
+        int n = arr.length;
 
-class CustomComparator implements Comparator<Integer> {
-    private int findWeight(int num) {
-        int weight = 0;
-        
-        while (num > 0) {
-            weight++;
-            num &= (num - 1);
+        for (int i = 0; i < n; i++) {
+            arr[i] += 10001 * Integer.bitCount(arr[i]);
         }
-        
-        return weight;
+
+        quicksort(arr, 0, n - 1);
+
+        for (int i = 0; i < n; i++) {
+            arr[i] %= 10001;
+        }
+
+        return arr;
     }
-    
-    @Override
-    public int compare(Integer a, Integer b) {
-        if (findWeight(a) == findWeight(b)) {
-            return a - b;
+
+    private static void quicksort(int[] nums, int left, int right) {
+        if (left < right) {
+            int part = partition(nums, left - 1, right + 1);
+            quicksort(nums, left, part);
+            quicksort(nums, part + 1, right);
         }
+    }
+
+    private static int partition(int[] nums, int left, int right) {
+        int current = getPivot(nums[left + 1], nums[left + right >>> 1], nums[right - 1]);
+        int temp = 0;
         
-        return findWeight(a) - findWeight(b);
+        while(true) {
+            do {
+                left++;
+            } while(nums[left] < current);
+
+            do {
+                right--;
+            } while(nums[right] > current);
+            
+            if(left >= right) {
+                return right;
+            }
+
+            temp = nums[left];
+            nums[left] = nums[right];
+            nums[right] = temp;
+        }
+    }
+
+    private static int getPivot(int a, int b, int c) {
+        if ((a >= b) ^ (a >= c)) {
+            return a;
+        }
+
+        if ((a >= b) ^ (c >= b)) {
+            return b;
+        }
+
+        return c;
     }
 }
