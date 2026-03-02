@@ -81,6 +81,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1505-create-target-array-in-the-given-order](https://github.com/AkashKannapiran/LeetCode/tree/master/1505-create-target-array-in-the-given-order) |
 | [1510-find-lucky-integer-in-an-array](https://github.com/AkashKannapiran/LeetCode/tree/master/1510-find-lucky-integer-in-an-array) |
 | [1528-kids-with-the-greatest-number-of-candies](https://github.com/AkashKannapiran/LeetCode/tree/master/1528-kids-with-the-greatest-number-of-candies) |
+| [1536-minimum-swaps-to-arrange-a-binary-grid](https://github.com/AkashKannapiran/LeetCode/tree/master/1536-minimum-swaps-to-arrange-a-binary-grid) |
 | [1548-check-if-all-1s-are-at-least-length-k-places-away](https://github.com/AkashKannapiran/LeetCode/tree/master/1548-check-if-all-1s-are-at-least-length-k-places-away) |
 | [1580-shuffle-the-array](https://github.com/AkashKannapiran/LeetCode/tree/master/1580-shuffle-the-array) |
 | [1586-longest-subarray-of-1s-after-deleting-one-element](https://github.com/AkashKannapiran/LeetCode/tree/master/1586-longest-subarray-of-1s-after-deleting-one-element) |
@@ -888,6 +889,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0945-snakes-and-ladders](https://github.com/AkashKannapiran/LeetCode/tree/master/0945-snakes-and-ladders) |
 | [1292-maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold](https://github.com/AkashKannapiran/LeetCode/tree/master/1292-maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold) |
 | [1402-count-square-submatrices-with-all-ones](https://github.com/AkashKannapiran/LeetCode/tree/master/1402-count-square-submatrices-with-all-ones) |
+| [1536-minimum-swaps-to-arrange-a-binary-grid](https://github.com/AkashKannapiran/LeetCode/tree/master/1536-minimum-swaps-to-arrange-a-binary-grid) |
 | [1628-count-submatrices-with-all-ones](https://github.com/AkashKannapiran/LeetCode/tree/master/1628-count-submatrices-with-all-ones) |
 | [1677-matrix-diagonal-sum](https://github.com/AkashKannapiran/LeetCode/tree/master/1677-matrix-diagonal-sum) |
 | [1791-richest-customer-wealth](https://github.com/AkashKannapiran/LeetCode/tree/master/1791-richest-customer-wealth) |
@@ -1048,6 +1050,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1448-maximum-69-number](https://github.com/AkashKannapiran/LeetCode/tree/master/1448-maximum-69-number) |
 | [1478-maximum-number-of-events-that-can-be-attended](https://github.com/AkashKannapiran/LeetCode/tree/master/1478-maximum-number-of-events-that-can-be-attended) |
 | [1529-max-difference-you-can-get-from-changing-an-integer](https://github.com/AkashKannapiran/LeetCode/tree/master/1529-max-difference-you-can-get-from-changing-an-integer) |
+| [1536-minimum-swaps-to-arrange-a-binary-grid](https://github.com/AkashKannapiran/LeetCode/tree/master/1536-minimum-swaps-to-arrange-a-binary-grid) |
 | [1612-avoid-flood-in-the-city](https://github.com/AkashKannapiran/LeetCode/tree/master/1612-avoid-flood-in-the-city) |
 | [1633-minimum-number-of-increments-on-subarrays-to-form-a-target-array](https://github.com/AkashKannapiran/LeetCode/tree/master/1633-minimum-number-of-increments-on-subarrays-to-form-a-target-array) |
 | [1689-partitioning-into-minimum-number-of-deci-binary-numbers](https://github.com/AkashKannapiran/LeetCode/tree/master/1689-partitioning-into-minimum-number-of-deci-binary-numbers) |
