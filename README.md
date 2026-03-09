@@ -577,6 +577,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1747-lexicographically-smallest-string-after-applying-operations](https://github.com/AkashKannapiran/LeetCode/tree/master/1747-lexicographically-smallest-string-after-applying-operations) |
 | [1758-minimum-changes-to-make-alternating-binary-string](https://github.com/AkashKannapiran/LeetCode/tree/master/1758-minimum-changes-to-make-alternating-binary-string) |
 | [1818-maximum-score-from-removing-substrings](https://github.com/AkashKannapiran/LeetCode/tree/master/1818-maximum-score-from-removing-substrings) |
+| [1888-minimum-number-of-flips-to-make-the-binary-string-alternating](https://github.com/AkashKannapiran/LeetCode/tree/master/1888-minimum-number-of-flips-to-make-the-binary-string-alternating) |
 | [1894-merge-strings-alternately](https://github.com/AkashKannapiran/LeetCode/tree/master/1894-merge-strings-alternately) |
 | [1899-count-items-matching-a-rule](https://github.com/AkashKannapiran/LeetCode/tree/master/1899-count-items-matching-a-rule) |
 | [1960-check-if-the-sentence-is-pangram](https://github.com/AkashKannapiran/LeetCode/tree/master/1960-check-if-the-sentence-is-pangram) |
@@ -954,6 +955,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1700-minimum-time-to-make-rope-colorful](https://github.com/AkashKannapiran/LeetCode/tree/master/1700-minimum-time-to-make-rope-colorful) |
 | [1732-minimum-one-bit-operations-to-make-integers-zero](https://github.com/AkashKannapiran/LeetCode/tree/master/1732-minimum-one-bit-operations-to-make-integers-zero) |
 | [1851-maximum-number-of-events-that-can-be-attended-ii](https://github.com/AkashKannapiran/LeetCode/tree/master/1851-maximum-number-of-events-that-can-be-attended-ii) |
+| [1888-minimum-number-of-flips-to-make-the-binary-string-alternating](https://github.com/AkashKannapiran/LeetCode/tree/master/1888-minimum-number-of-flips-to-make-the-binary-string-alternating) |
 | [1986-largest-color-value-in-a-directed-graph](https://github.com/AkashKannapiran/LeetCode/tree/master/1986-largest-color-value-in-a-directed-graph) |
 | [2028-the-earliest-and-latest-rounds-where-players-compete](https://github.com/AkashKannapiran/LeetCode/tree/master/2028-the-earliest-and-latest-rounds-where-players-compete) |
 | [2054-two-best-non-overlapping-events](https://github.com/AkashKannapiran/LeetCode/tree/master/2054-two-best-non-overlapping-events) |
@@ -1265,6 +1267,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0940-fruit-into-baskets](https://github.com/AkashKannapiran/LeetCode/tree/master/0940-fruit-into-baskets) |
 | [1586-longest-subarray-of-1s-after-deleting-one-element](https://github.com/AkashKannapiran/LeetCode/tree/master/1586-longest-subarray-of-1s-after-deleting-one-element) |
 | [1813-maximum-erasure-value](https://github.com/AkashKannapiran/LeetCode/tree/master/1813-maximum-erasure-value) |
+| [1888-minimum-number-of-flips-to-make-the-binary-string-alternating](https://github.com/AkashKannapiran/LeetCode/tree/master/1888-minimum-number-of-flips-to-make-the-binary-string-alternating) |
 | [1984-minimum-difference-between-highest-and-lowest-of-k-scores](https://github.com/AkashKannapiran/LeetCode/tree/master/1984-minimum-difference-between-highest-and-lowest-of-k-scores) |
 | [2229-maximum-fruits-harvested-after-at-most-k-steps](https://github.com/AkashKannapiran/LeetCode/tree/master/2229-maximum-fruits-harvested-after-at-most-k-steps) |
 | [2394-count-subarrays-with-score-less-than-k](https://github.com/AkashKannapiran/LeetCode/tree/master/2394-count-subarrays-with-score-less-than-k) |
