@@ -1,36 +1,37 @@
 class Solution {
-
-    private static final double EPS = 1e-7;
-
     public long minNumberOfSeconds(int mountainHeight, int[] workerTimes) {
-        int maxWorkerTimes = 0;
 
-        for (int t : workerTimes) {
-            maxWorkerTimes = Math.max(maxWorkerTimes, t);
+        int max = 0;
+
+        for (int x : workerTimes) {
+            max = Math.max(max, x);
         }
 
-        long l = 1;
-        long r = ((long) maxWorkerTimes * mountainHeight * (mountainHeight + 1)) / 2;
-        long ans = 0;
-
-        while (l <= r) {
-            long mid = (l + r) / 2;
-            long cnt = 0;
-
-            for (int t : workerTimes) {
-                long work = mid / t;
-                long k = (long) ((-1.0 + Math.sqrt(1 + work * 8)) / 2 + EPS);
-                cnt += k;
-            }
-
-            if (cnt >= mountainHeight) {
-                ans = mid;
-                r = mid - 1;
+        int h = (mountainHeight-1) / workerTimes.length + 1;
+        long left = 1, right = (long) max * h * (h + 1) / 2;
+        
+        while (left <= right) {
+            long mid = left + (right - left) / 2;
+            
+            if (check(mountainHeight, workerTimes, mid)) {
+                right = mid - 1;
             } else {
-                l = mid + 1;
+                left = mid + 1;
             }
         }
 
-        return ans;
+        return left;
+    }
+
+    boolean check(int mountainHeight, int[] workerTimes, long time) {
+        for (int x : workerTimes) {
+            mountainHeight -= (int)(-1 + Math.sqrt(1 + 8 * time / x)) / 2;
+            
+            if (mountainHeight <= 0) {
+                return true;
+            }
+        }
+        
+        return false;
     }
 }
