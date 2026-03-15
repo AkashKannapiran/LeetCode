@@ -1,54 +1,39 @@
-public class Solution {
+class Solution {
+
+    static int count = 0;
+    static String res = "";
 
     public String getHappyString(int n, int k) {
-        int total = 3 * (1 << (n - 1));
+        count = 0;
+        res = "";
+        backtrack(n, k, new StringBuilder(), ' ');
 
-        if (k > total) {
-            return "";
+        return res;
+    }
+
+    private static void backtrack(int n, int k, StringBuilder sb, char lastChar) {
+        if (sb.length() == n) {
+            if (++count == k) {
+                res = sb.toString();
+            }
+
+            return;
         }
 
-        StringBuilder result = new StringBuilder(n);
+        char[] chars = { 'a', 'b', 'c' };
 
-        for (int i = 0; i < n; i++) {
-            result.append('a');
-        }
+        for (int i = 0; i < chars.length; i++) {
+            char c = chars[i];
 
-        Map<Character, Character> nextSmallest = new HashMap<>();
-        nextSmallest.put('a', 'b');
-        nextSmallest.put('b', 'a');
-        nextSmallest.put('c', 'a');
+            if (c != lastChar) {
+                sb.append(c);
+                backtrack(n, k, sb, c);
+                sb.setLength(sb.length() - 1);
 
-        Map<Character, Character> nextGreatest = new HashMap<>();
-        nextGreatest.put('a', 'c');
-        nextGreatest.put('b', 'c');
-        nextGreatest.put('c', 'b');
-
-        int startA = 1;
-        int startB = startA + (1 << (n - 1));
-        int startC = startB + (1 << (n - 1));
-
-        if (k < startB) {
-            result.setCharAt(0, 'a');
-            k -= startA;
-        } else if (k < startC) {
-            result.setCharAt(0, 'b');
-            k -= startB;
-        } else {
-            result.setCharAt(0, 'c');
-            k -= startC;
-        }
-
-        for (int charIndex = 1; charIndex < n; charIndex++) {
-            int midpoint = (1 << (n - charIndex - 1));
-
-            if (k < midpoint) {
-                result.setCharAt(charIndex, nextSmallest.get(result.charAt(charIndex - 1)));
-            } else {
-                result.setCharAt(charIndex, nextGreatest.get(result.charAt(charIndex - 1)));
-                k -= midpoint;
+                if (!res.isEmpty()) {
+                    return;
+                }
             }
         }
-
-        return result.toString();
     }
 }
