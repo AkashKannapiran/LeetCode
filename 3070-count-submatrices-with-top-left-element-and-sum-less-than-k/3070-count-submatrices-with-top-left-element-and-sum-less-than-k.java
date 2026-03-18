@@ -1,29 +1,24 @@
 class Solution {
+
     public int countSubmatrices(int[][] grid, int k) {
-        int m = grid.length;
-        int n = grid[0].length;
-        int ans = 0;
+        int n = grid.length;
+        int m = grid[0].length;
+        int[] cols = new int[m];
+        int res = 0;
 
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                long up = (i > 0 ? grid[i - 1][j] : 0);
-                long left = (j > 0 ? grid[i][j - 1] : 0);
-                long diag = (i > 0 && j > 0 ? grid[i - 1][j - 1] : 0);
+        for (int i = 0; i < n; i++) {
+            int rows = 0;
 
-                grid[i][j] = (int) (grid[i][j] + up + left - diag);
+            for (int j = 0; j < m; j++) {
+                cols[j] += grid[i][j];
+                rows += cols[j];
 
-                if (grid[i][j] <= k) {
-                    ans++;
-                } else {
-                    if (j == 0) {
-                        return ans;
-                    }
-
-                    break;
+                if (rows <= k) {
+                    res++;
                 }
             }
         }
 
-        return ans;
+        return res;
     }
 }
