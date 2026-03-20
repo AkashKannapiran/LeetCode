@@ -1,37 +1,40 @@
 class Solution {
+    public int getmn(int[] arr) {
+        Arrays.sort(arr);
+        int mn = Integer.MAX_VALUE;
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i - 1] != arr[i]) {
+                mn = Math.min(mn, Math.abs(arr[i] - arr[i - 1]));
+            }
+
+        }
+
+        return mn == Integer.MAX_VALUE ? 0 : mn;
+    }
 
     public int[][] minAbsDiff(int[][] grid, int k) {
         int m = grid.length;
         int n = grid[0].length;
-        int[][] res = new int[m - k + 1][n - k + 1];
-        
-        for (int i = 0; i + k <= m; i++) {
-            for (int j = 0; j + k <= n; j++) {
-                List<Integer> kgrid = new ArrayList<>();
+        int[][] answ = new int[m - k + 1][n - k + 1];
 
-                for (int x = i; x < i + k; x++) {
-                    for (int y = j; y < j + k; y++) {
-                        kgrid.add(grid[x][y]);
+        for (int row = 0; row < m - k + 1; row++) {
+            for (int col = 0; col < n - k + 1; col++) {
+                int[] arr = new int[k * k];
+                int idx = 0;
+
+                for (int i = row; i < row + k; i++) {
+                    for (int j = col; j < col + k; j++) {
+                        arr[idx] = grid[i][j];
+                        idx++;
                     }
                 }
-                
-                int kmin = Integer.MAX_VALUE;
-                Collections.sort(kgrid);
-                
-                for (int t = 1; t < kgrid.size(); t++) {
-                    if (kgrid.get(t).equals(kgrid.get(t - 1))) {
-                        continue;
-                    }
-                    
-                    kmin = Math.min(kmin, kgrid.get(t) - kgrid.get(t - 1));
-                }
 
-                if (kmin != Integer.MAX_VALUE) {
-                    res[i][j] = kmin;
-                }
+                answ[row][col] = getmn(arr);
+
             }
         }
-        
-        return res;
+
+        return answ;
     }
 }
