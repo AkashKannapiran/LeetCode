@@ -1,30 +1,37 @@
 class Solution {
+    public void swap(int[][] arr, int i, int j) {
+        int temp = arr[i][j];
+        arr[i][j] = arr[j][i];
+        arr[j][i] = temp;
+    }
 
-    public boolean findRotation(int[][] mat, int[][] target) {
+    public void reverse(int[] arr) {
+        int n = arr.length;
+
+        for (int i = 0; i < n / 2; i++) {
+            int temp = arr[i];
+            arr[i] = arr[n - 1 - i];
+            arr[n - 1 - i] = temp;
+        }
+    }
+
+    public void rotate(int[][] mat) {
         int n = mat.length;
-
-        for (int k = 0; k < 4; k++) {
-            for (int i = 0; i < n / 2; i++) {
-                for (int j = 0; j < (n + 1) / 2; j++) {
-                    int temp = mat[i][j];
-                    mat[i][j] = mat[n - 1 - j][i];
-                    mat[n - 1 - j][i] = mat[n - 1 - i][n - 1 - j];
-                    mat[n - 1 - i][n - 1 - j] = mat[j][n - 1 - i];
-                    mat[j][n - 1 - i] = temp;
-                }
-            }
-
-            if (isEqual(mat, target)) {
-                return true;
+        
+        for (int i2 = 0; i2 < n - 1; i2++) {
+            for (int j = i2 + 1; j < n; j++) {
+                swap(mat, i2, j);
             }
         }
         
-        return false;
+        for (int i1 = 0; i1 < n; i1++) {
+            reverse(mat[i1]);
+        }
     }
 
-    private boolean isEqual(int[][] mat, int[][] target) {
+    public boolean isEqual(int[][] mat, int[][] target) {
         int n = mat.length;
-
+        
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if (mat[i][j] != target[i][j]) {
@@ -32,7 +39,23 @@ class Solution {
                 }
             }
         }
-
+        
         return true;
+    }
+
+    public boolean findRotation(int[][] mat, int[][] target) {
+        int n = mat.length;
+        
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (isEqual(mat, target)) {
+                    return true;
+                }
+
+                rotate(mat);
+            }
+        }
+        
+        return false;
     }
 }
