@@ -35,6 +35,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0407-trapping-rain-water-ii](https://github.com/AkashKannapiran/LeetCode/tree/master/0407-trapping-rain-water-ii) |
 | [0416-partition-equal-subset-sum](https://github.com/AkashKannapiran/LeetCode/tree/master/0416-partition-equal-subset-sum) |
 | [0417-pacific-atlantic-water-flow](https://github.com/AkashKannapiran/LeetCode/tree/master/0417-pacific-atlantic-water-flow) |
+| [0442-find-all-duplicates-in-an-array](https://github.com/AkashKannapiran/LeetCode/tree/master/0442-find-all-duplicates-in-an-array) |
 | [0448-find-all-numbers-disappeared-in-an-array](https://github.com/AkashKannapiran/LeetCode/tree/master/0448-find-all-numbers-disappeared-in-an-array) |
 | [0474-ones-and-zeroes](https://github.com/AkashKannapiran/LeetCode/tree/master/0474-ones-and-zeroes) |
 | [0498-diagonal-traverse](https://github.com/AkashKannapiran/LeetCode/tree/master/0498-diagonal-traverse) |
@@ -299,6 +300,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0268-missing-number](https://github.com/AkashKannapiran/LeetCode/tree/master/0268-missing-number) |
 | [0368-largest-divisible-subset](https://github.com/AkashKannapiran/LeetCode/tree/master/0368-largest-divisible-subset) |
 | [0389-find-the-difference](https://github.com/AkashKannapiran/LeetCode/tree/master/0389-find-the-difference) |
+| [0442-find-all-duplicates-in-an-array](https://github.com/AkashKannapiran/LeetCode/tree/master/0442-find-all-duplicates-in-an-array) |
 | [0594-longest-harmonious-subsequence](https://github.com/AkashKannapiran/LeetCode/tree/master/0594-longest-harmonious-subsequence) |
 | [0611-valid-triangle-number](https://github.com/AkashKannapiran/LeetCode/tree/master/0611-valid-triangle-number) |
 | [0761-special-binary-string](https://github.com/AkashKannapiran/LeetCode/tree/master/0761-special-binary-string) |
@@ -471,6 +473,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0242-valid-anagram](https://github.com/AkashKannapiran/LeetCode/tree/master/0242-valid-anagram) |
 | [0268-missing-number](https://github.com/AkashKannapiran/LeetCode/tree/master/0268-missing-number) |
 | [0389-find-the-difference](https://github.com/AkashKannapiran/LeetCode/tree/master/0389-find-the-difference) |
+| [0442-find-all-duplicates-in-an-array](https://github.com/AkashKannapiran/LeetCode/tree/master/0442-find-all-duplicates-in-an-array) |
 | [0448-find-all-numbers-disappeared-in-an-array](https://github.com/AkashKannapiran/LeetCode/tree/master/0448-find-all-numbers-disappeared-in-an-array) |
 | [0594-longest-harmonious-subsequence](https://github.com/AkashKannapiran/LeetCode/tree/master/0594-longest-harmonious-subsequence) |
 | [0756-pyramid-transition-matrix](https://github.com/AkashKannapiran/LeetCode/tree/master/0756-pyramid-transition-matrix) |
